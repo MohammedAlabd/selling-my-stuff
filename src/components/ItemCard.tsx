@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface Item {
   id: number;
@@ -11,6 +10,7 @@ interface Item {
   condition: string;
   category: string;
   assets: string[];
+  specifications?: Record<string, string | undefined>;
 }
 
 interface ItemCardProps {

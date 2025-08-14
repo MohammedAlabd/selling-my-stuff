@@ -11,56 +11,56 @@ export default function CartPage() {
 
   const generateWhatsAppMessage = () => {
     if (cart.items.length === 0) return '';
-    
+
     let message = 'Hi! I am interested in the following items from your moving sale:\n\n';
-    
+
     cart.items.forEach((item, index) => {
       message += `${index + 1}. ${item.name} - $${item.price}\n`;
       message += `   Condition: ${item.condition}\n`;
       message += `   Category: ${item.category}\n\n`;
     });
-    
+
     message += `Total: $${getTotalPrice()}\n\n`;
     message += 'Are these items still available? When can I arrange pickup for all of them?';
-    
+
     return encodeURIComponent(message);
   };
 
   const generateBulkOfferMessage = (offerPrice: number) => {
     if (cart.items.length === 0) return '';
-    
+
     let message = 'Hi! I would like to make a bulk offer on the following items from your moving sale:\n\n';
-    
+
     cart.items.forEach((item, index) => {
       message += `${index + 1}. ${item.name} - Listed: $${item.price}\n`;
       message += `   Condition: ${item.condition}\n`;
       message += `   Category: ${item.category}\n\n`;
     });
-    
+
     message += `Total Listed Price: $${getTotalPrice()}\n`;
     message += `My Bulk Offer: $${offerPrice}\n\n`;
     message += 'I am interested in purchasing all these items together. Is this bulk offer acceptable? I can arrange pickup for all items at once if you accept.';
-    
+
     return encodeURIComponent(message);
   };
 
   const handleBulkOfferSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const price = parseFloat(bulkOfferPrice);
-    
+
     if (isNaN(price) || price <= 0) {
       alert('Please enter a valid price');
       return;
     }
-    
+
     if (price >= getTotalPrice()) {
       alert('Offer should be less than the total asking price');
       return;
     }
-    
+
     const whatsappUrl = `https://wa.me/905368968229?text=${generateBulkOfferMessage(price)}`;
     window.open(whatsappUrl, '_blank');
-    
+
     setBulkOfferPrice('');
     setShowBulkOffer(false);
   };
@@ -70,7 +70,7 @@ export default function CartPage() {
       <div className="min-h-screen bg-gray-50">
         <header className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link 
+            <Link
               href="/"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
             >
@@ -84,7 +84,7 @@ export default function CartPage() {
             <div className="text-6xl mb-4">🛒</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Your cart is empty</h1>
             <p className="text-gray-600 mb-8">Add some items to get started!</p>
-            <Link 
+            <Link
               href="/"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             >
@@ -100,7 +100,7 @@ export default function CartPage() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
           >
@@ -137,7 +137,7 @@ export default function CartPage() {
                       <p className="text-lg font-bold text-green-600">${item.price}</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-4">
                     <Link
                       href={`/item/${item.id}`}
@@ -176,7 +176,7 @@ export default function CartPage() {
                   <span>💬</span>
                   Contact Seller for All Items
                 </a>
-                
+
                 <button
                   onClick={() => setShowBulkOffer(true)}
                   className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -184,7 +184,7 @@ export default function CartPage() {
                   <span>💰</span>
                   Make Bulk Offer
                 </button>
-                
+
                 <div className="text-center">
                   <p className="text-sm text-gray-600">
                     Contact seller or make an offer for all items at once
@@ -195,7 +195,7 @@ export default function CartPage() {
           </div>
         </div>
       </main>
-      
+
       {/* Bulk Offer Modal */}
       {showBulkOffer && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
@@ -221,7 +221,7 @@ export default function CartPage() {
                 ))}
               </div>
               <div className="border-t pt-2 mt-2">
-                <div className="flex justify-between font-semibold">
+                <div className="flex text-gray-700 justify-between font-semibold">
                   <span>Total Listed Price:</span>
                   <span className="text-green-600">${getTotalPrice()}</span>
                 </div>
@@ -239,7 +239,7 @@ export default function CartPage() {
                   value={bulkOfferPrice}
                   onChange={(e) => setBulkOfferPrice(e.target.value)}
                   placeholder="Enter your bulk offer"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   min="1"
                   step="1"
                   required

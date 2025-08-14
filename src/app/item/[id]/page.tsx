@@ -2,7 +2,6 @@
 
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import { useCart } from '@/context/CartContext';
@@ -17,7 +16,7 @@ interface Item {
   condition: string;
   category: string;
   assets: string[];
-  specifications: Record<string, string>;
+  specifications?: Record<string, string | undefined>;
 }
 
 
@@ -121,7 +120,7 @@ export default function ItemPage() {
                   <div className="bg-gray-50 rounded-lg p-4">
                     <dl className="grid grid-cols-1 gap-3">
                       {Object.entries(item.specifications)
-                        .filter(([_, value]) => typeof value === 'string')
+                        .filter(([, value]) => typeof value === 'string' && value !== undefined)
                         .map(([key, value]) => (
                           <div key={key} className="flex flex-col sm:flex-row">
                             <dt className="font-medium text-gray-900 sm:w-1/3 capitalize">

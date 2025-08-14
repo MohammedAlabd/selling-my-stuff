@@ -9,6 +9,8 @@ interface Item {
   condition: string;
   category: string;
   description: string;
+  assets: string[];
+  specifications?: Record<string, string | undefined>;
 }
 
 interface OfferModalProps {
@@ -25,17 +27,17 @@ export default function OfferModal({ item, isOpen, onClose, onSubmitOffer }: Off
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const price = parseFloat(offerPrice);
-    
+
     if (isNaN(price) || price <= 0) {
       setError('Please enter a valid price');
       return;
     }
-    
+
     if (price >= item.price) {
       setError('Offer should be less than the asking price');
       return;
     }
-    
+
     setError('');
     onSubmitOffer(price);
     setOfferPrice('');
@@ -82,7 +84,7 @@ export default function OfferModal({ item, isOpen, onClose, onSubmitOffer }: Off
               value={offerPrice}
               onChange={(e) => setOfferPrice(e.target.value)}
               placeholder="Enter your offer"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               min="1"
               step="1"
               required

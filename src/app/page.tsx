@@ -13,6 +13,7 @@ interface Item {
   condition: string;
   category: string;
   assets: string[];
+  specifications?: Record<string, string | undefined>;
 }
 
 export default function Home() {
