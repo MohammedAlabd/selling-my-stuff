@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung Refrigerator",
+    "description": "Large stainless steel Samsung refrigerator with french doors and bottom freezer. Great condition, barely used for 2 years. Energy efficient with ice maker and water dispenser.",
+    "price": 800,
+    "condition": "Excellent",
+    "category": "Appliances",
+    "assets": [
+      "/images/fridge-1.jpg",
+      "/images/fridge-2.jpg",
+      "/images/fridge-3.jpg"
+    ],
+    "specifications": {
+      "brand": "Samsung",
+      "model": "RF23R6301SR",
+      "capacity": "23 cu ft",
+      "dimensions": "70\" H x 36\" W x 32\" D"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Bosch Dishwasher",
+    "description": "High-quality Bosch dishwasher with stainless steel interior. Very quiet operation and excellent cleaning performance. Perfect for small to medium families.",
+    "price": 450,
+    "condition": "Very Good",
+    "category": "Appliances",
+    "assets": [
+      "/images/dishwasher-1.jpg",
+      "/images/dishwasher-2.jpg"
+    ],
+    "specifications": {
+      "brand": "Bosch",
+      "model": "SHPM65W55N",
+      "capacity": "16 place settings",
+      "energy_rating": "Energy Star"
+    }
+  },
+  {
+    "id": 3,
+    "name": "West Elm Dining Table",
+    "description": "Beautiful solid wood dining table from West Elm. Seats 6 people comfortably. Minor scratches but overall in great condition. Perfect for a new home.",
+    "price": 600,
+    "condition": "Good",
+    "category": "Furniture",
+    "assets": [
+      "/images/dining-table-1.jpg",
+      "/images/dining-table-2.jpg",
+      "/images/dining-table-3.jpg"
+    ],
+    "specifications": {
+      "brand": "West Elm",
+      "material": "Solid Wood",
+      "dimensions": "72\" L x 36\" W x 30\" H",
+      "seats": "6 people"
+    }
+  },
+  {
+    "id": 4,
+    "name": "IKEA KALLAX Bookshelf",
+    "description": "White KALLAX 4x4 bookshelf unit with some storage boxes included. Great for organizing books, decorative items, or storage. Easy to assemble and move.",
+    "price": 80,
+    "condition": "Good",
+    "category": "Furniture",
+    "assets": [
+      "/images/bookshelf-1.jpg",
+      "/images/bookshelf-2.jpg"
+    ],
+    "specifications": {
+      "brand": "IKEA",
+      "model": "KALLAX",
+      "dimensions": "57⅞\" x 57⅞\" x 15⅜\"",
+      "compartments": "16"
+    }
+  },
+  {
+    "id": 5,
+    "name": "LG Washer & Dryer Set",
+    "description": "Matching LG front-loading washer and dryer set. Energy efficient and high capacity. Perfect for families. Includes all necessary hoses and connections.",
+    "price": 1200,
+    "condition": "Excellent",
+    "category": "Appliances",
+    "assets": [
+      "/images/washer-dryer-1.jpg",
+      "/images/washer-dryer-2.jpg",
+      "/images/washer-dryer-3.jpg"
+    ],
+    "specifications": {
+      "brand": "LG",
+      "type": "Front Loading",
+      "capacity": "4.5 cu ft washer, 7.4 cu ft dryer",
+      "features": "Steam, Smart Diagnosis"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Sony 55\" 4K TV",
+    "description": "Sony Bravia 55-inch 4K HDR Smart TV. Excellent picture quality with vibrant colors. Includes original remote and stand. Wall mount bracket included.",
+    "price": 400,
+    "condition": "Very Good",
+    "category": "Electronics",
+    "assets": [
+      "/images/tv-1.jpg",
+      "/images/tv-2.jpg"
+    ],
+    "specifications": {
+      "brand": "Sony",
+      "model": "XBR-55X800H",
+      "size": "55 inches",
+      "resolution": "4K HDR"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Queen Mattress & Box Spring",
+    "description": "Comfortable queen-size mattress with matching box spring. Medium-firm support, great for back health. Clean and well-maintained. 3 years old.",
+    "price": 300,
+    "condition": "Good",
+    "category": "Furniture",
+    "assets": [
+      "/images/mattress-1.jpg",
+      "/images/mattress-2.jpg"
+    ],
+    "specifications": {
+      "size": "Queen (60\" x 80\")",
+      "firmness": "Medium-Firm",
+      "type": "Memory Foam Hybrid",
+      "age": "3 years"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Kitchen Island Cart",
+    "description": "Mobile kitchen island with butcher block top and storage underneath. Perfect for extra counter space and storage. Wheels lock in place.",
+    "price": 200,
+    "condition": "Good",
+    "category": "Furniture",
+    "assets": [
+      "/images/kitchen-cart-1.jpg",
+      "/images/kitchen-cart-2.jpg"
+    ],
+    "specifications": {
+      "material": "Butcher Block Top",
+      "dimensions": "48\" L x 24\" W x 36\" H",
+      "features": "Rolling wheels, Storage shelves"
+    }
+  }
+]
