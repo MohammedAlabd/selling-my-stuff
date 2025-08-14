@@ -16,8 +16,7 @@ export default function CartPage() {
 
     cart.items.forEach((item, index) => {
       message += `${index + 1}. ${item.name} - $${item.price}\n`;
-      message += `   Condition: ${item.condition}\n`;
-      message += `   Category: ${item.category}\n\n`;
+      message += `   Link: ${window.location.origin}/item/${item.id}\n`;
     });
 
     message += `Total: $${getTotalPrice()}\n\n`;
@@ -33,8 +32,7 @@ export default function CartPage() {
 
     cart.items.forEach((item, index) => {
       message += `${index + 1}. ${item.name} - Listed: $${item.price}\n`;
-      message += `   Condition: ${item.condition}\n`;
-      message += `   Category: ${item.category}\n\n`;
+      message += `   Link: ${window.location.origin}/item/${item.id}\n`;
     });
 
     message += `Total Listed Price: $${getTotalPrice()}\n`;

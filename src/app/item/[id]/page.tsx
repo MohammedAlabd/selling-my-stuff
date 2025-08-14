@@ -42,7 +42,7 @@ export default function ItemPage() {
   };
 
   const handleOfferSubmit = (offerPrice: number) => {
-    const message = `Hi! I'd like to make an offer on the ${item.name}.\n\nItem Details:\n- Listed Price: $${item.price}\n- My Offer: $${offerPrice}\n- Condition: ${item.condition}\n- Category: ${item.category}\n\nDescription: ${item.description}\n\nIs this offer acceptable? I'm ready to arrange pickup if you accept.`;
+    const message = `Hi! I'd like to make an offer on the ${item.name}.\n\nListed Price: $${item.price}\nMy Offer: $${offerPrice}\n\nItem Link: ${window.location.href}\n\nIs this offer acceptable? I'm ready to arrange pickup if you accept.`;
 
     const whatsappUrl = `https://wa.me/905368968229?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -137,7 +137,7 @@ export default function ItemPage() {
               <div className="space-y-4">
                 <a
                   href={`https://wa.me/905368968229?text=${encodeURIComponent(
-                    `Hi! I'm interested in the ${item.name} listed for $${item.price}.\n\nIs this item still available? When can I arrange pickup?`
+                    `Hi! I'm interested in the ${item.name} listed for $${item.price}.\n\nItem Link: ${window.location.href}\n\nIs this item still available? When can I arrange pickup?`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
