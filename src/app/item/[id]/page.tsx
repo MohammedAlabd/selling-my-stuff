@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { use } from 'react';
+import { useCart } from '@/context/CartContext';
 import itemsData from '@/data/items.json';
 
 interface Item {
@@ -23,22 +24,47 @@ interface PageProps {
 
 export default function ItemPage({ params }: PageProps) {
   const { id } = use(params);
+  const { addItem, removeItem, isInCart, getItemCount } = useCart();
   const item: Item | undefined = itemsData.find((item) => item.id === parseInt(id));
 
   if (!item) {
     notFound();
   }
 
+  const itemInCart = isInCart(item.id);
+
+  const handleCartAction = () => {
+    if (itemInCart) {
+      removeItem(item.id);
+    } else {
+      addItem(item);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            ← Back to all items
-          </Link>
+          <div className="flex justify-between items-center">
+            <Link
+              href="/"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              ← Back to all items
+            </Link>
+            <Link 
+              href="/cart"
+              className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+            >
+              <span>🛒</span>
+              Cart
+              {getItemCount() > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {getItemCount()}
+                </span>
+              )}
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -111,8 +137,16 @@ export default function ItemPage({ params }: PageProps) {
                   <span>💬</span>
                   Contact on WhatsApp
                 </a>
-                <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-colors">
-                  Save for Later
+                <button 
+                  onClick={handleCartAction}
+                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 ${
+                    itemInCart 
+                      ? 'bg-red-600 hover:bg-red-700 text-white' 
+                      : 'bg-blue-600 hover:bg-blue-700 text-white'
+                  }`}
+                >
+                  <span>{itemInCart ? '🗑️' : '🛒'}</span>
+                  {itemInCart ? 'Remove from Cart' : 'Add to Cart'}
                 </button>
               </div>
 

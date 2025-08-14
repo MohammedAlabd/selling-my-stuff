@@ -1,4 +1,8 @@
+'use client';
+
 import ItemCard from '@/components/ItemCard';
+import Link from 'next/link';
+import { useCart } from '@/context/CartContext';
 import itemsData from '@/data/items.json';
 
 interface Item {
@@ -12,18 +16,35 @@ interface Item {
 }
 
 export default function Home() {
+  const { getItemCount } = useCart();
   const items: Item[] = itemsData;
 
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Moving Sale - Everything Must Go!
-          </h1>
-          <p className="text-gray-600 mt-2">
-            Quality household items and furniture at great prices
-          </p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">
+                Moving Sale - Everything Must Go!
+              </h1>
+              <p className="text-gray-600 mt-2">
+                Quality household items and furniture at great prices
+              </p>
+            </div>
+            <Link 
+              href="/cart"
+              className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
+            >
+              <span>🛒</span>
+              Cart
+              {getItemCount() > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+                  {getItemCount()}
+                </span>
+              )}
+            </Link>
+          </div>
         </div>
       </header>
 
