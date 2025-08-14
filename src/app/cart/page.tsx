@@ -1,10 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 
 export default function CartPage() {
   const { cart, removeItem, clearCart, getTotalPrice } = useCart();
+  const [showBulkOffer, setShowBulkOffer] = useState(false);
+  const [bulkOfferPrice, setBulkOfferPrice] = useState('');
 
   const generateWhatsAppMessage = () => {
     if (cart.items.length === 0) return '';
@@ -21,6 +24,45 @@ export default function CartPage() {
     message += 'Are these items still available? When can I arrange pickup for all of them?';
     
     return encodeURIComponent(message);
+  };
+
+  const generateBulkOfferMessage = (offerPrice: number) => {
+    if (cart.items.length === 0) return '';
+    
+    let message = 'Hi! I would like to make a bulk offer on the following items from your moving sale:\n\n';
+    
+    cart.items.forEach((item, index) => {
+      message += `${index + 1}. ${item.name} - Listed: $${item.price}\n`;
+      message += `   Condition: ${item.condition}\n`;
+      message += `   Category: ${item.category}\n\n`;
+    });
+    
+    message += `Total Listed Price: $${getTotalPrice()}\n`;
+    message += `My Bulk Offer: $${offerPrice}\n\n`;
+    message += 'I am interested in purchasing all these items together. Is this bulk offer acceptable? I can arrange pickup for all items at once if you accept.';
+    
+    return encodeURIComponent(message);
+  };
+
+  const handleBulkOfferSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const price = parseFloat(bulkOfferPrice);
+    
+    if (isNaN(price) || price <= 0) {
+      alert('Please enter a valid price');
+      return;
+    }
+    
+    if (price >= getTotalPrice()) {
+      alert('Offer should be less than the total asking price');
+      return;
+    }
+    
+    const whatsappUrl = `https://wa.me/905368968229?text=${generateBulkOfferMessage(price)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    setBulkOfferPrice('');
+    setShowBulkOffer(false);
   };
 
   if (cart.items.length === 0) {
@@ -135,9 +177,17 @@ export default function CartPage() {
                   Contact Seller for All Items
                 </a>
                 
+                <button
+                  onClick={() => setShowBulkOffer(true)}
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <span>💰</span>
+                  Make Bulk Offer
+                </button>
+                
                 <div className="text-center">
                   <p className="text-sm text-gray-600">
-                    This will send a WhatsApp message with all selected items
+                    Contact seller or make an offer for all items at once
                   </p>
                 </div>
               </div>
@@ -145,6 +195,82 @@ export default function CartPage() {
           </div>
         </div>
       </main>
+      
+      {/* Bulk Offer Modal */}
+      {showBulkOffer && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-md w-full p-6">
+            <div className="flex justify-between items-start mb-4">
+              <h2 className="text-xl font-bold text-gray-900">Make Bulk Offer</h2>
+              <button
+                onClick={() => setShowBulkOffer(false)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="mb-4">
+              <h3 className="font-semibold text-gray-900 mb-2">Cart Items ({cart.items.length})</h3>
+              <div className="max-h-32 overflow-y-auto space-y-1">
+                {cart.items.map((item) => (
+                  <div key={item.id} className="text-sm text-gray-600 flex justify-between">
+                    <span>{item.name}</span>
+                    <span>${item.price}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="border-t pt-2 mt-2">
+                <div className="flex justify-between font-semibold">
+                  <span>Total Listed Price:</span>
+                  <span className="text-green-600">${getTotalPrice()}</span>
+                </div>
+              </div>
+            </div>
+
+            <form onSubmit={handleBulkOfferSubmit}>
+              <div className="mb-4">
+                <label htmlFor="bulk-offer-price" className="block text-sm font-medium text-gray-700 mb-2">
+                  Your Bulk Offer ($)
+                </label>
+                <input
+                  type="number"
+                  id="bulk-offer-price"
+                  value={bulkOfferPrice}
+                  onChange={(e) => setBulkOfferPrice(e.target.value)}
+                  placeholder="Enter your bulk offer"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  min="1"
+                  step="1"
+                  required
+                />
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                <p className="text-sm text-gray-600">
+                  Your bulk offer will be sent via WhatsApp with all item details. Buying in bulk often gets better deals!
+                </p>
+              </div>
+
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={() => setShowBulkOffer(false)}
+                  className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                >
+                  Send Bulk Offer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

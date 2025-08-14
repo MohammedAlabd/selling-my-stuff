@@ -3,8 +3,10 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { use } from 'react';
+import { useState } from 'react';
+import { useParams } from 'next/navigation';
 import { useCart } from '@/context/CartContext';
+import OfferModal from '@/components/OfferModal';
 import itemsData from '@/data/items.json';
 
 interface Item {
@@ -18,13 +20,12 @@ interface Item {
   specifications: Record<string, string>;
 }
 
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
 
-export default function ItemPage({ params }: PageProps) {
-  const { id } = use(params);
+export default function ItemPage() {
+  const params = useParams();
+  const id = typeof params.id === 'string' ? params.id : '';
   const { addItem, removeItem, isInCart, getItemCount } = useCart();
+  const [showOfferModal, setShowOfferModal] = useState(false);
   const item: Item | undefined = itemsData.find((item) => item.id === parseInt(id));
 
   if (!item) {
@@ -41,6 +42,13 @@ export default function ItemPage({ params }: PageProps) {
     }
   };
 
+  const handleOfferSubmit = (offerPrice: number) => {
+    const message = `Hi! I'd like to make an offer on the ${item.name}.\n\nItem Details:\n- Listed Price: $${item.price}\n- My Offer: $${offerPrice}\n- Condition: ${item.condition}\n- Category: ${item.category}\n\nDescription: ${item.description}\n\nIs this offer acceptable? I'm ready to arrange pickup if you accept.`;
+
+    const whatsappUrl = `https://wa.me/905368968229?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
@@ -52,7 +60,7 @@ export default function ItemPage({ params }: PageProps) {
             >
               ← Back to all items
             </Link>
-            <Link 
+            <Link
               href="/cart"
               className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
             >
@@ -112,14 +120,16 @@ export default function ItemPage({ params }: PageProps) {
                   <h2 className="text-xl font-semibold text-gray-900 mb-3">Specifications</h2>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <dl className="grid grid-cols-1 gap-3">
-                      {Object.entries(item.specifications).map(([key, value]) => (
-                        <div key={key} className="flex flex-col sm:flex-row">
-                          <dt className="font-medium text-gray-900 sm:w-1/3 capitalize">
-                            {key.replace(/_/g, ' ')}:
-                          </dt>
-                          <dd className="text-gray-700 sm:w-2/3">{value}</dd>
-                        </div>
-                      ))}
+                      {Object.entries(item.specifications)
+                        .filter(([_, value]) => typeof value === 'string')
+                        .map(([key, value]) => (
+                          <div key={key} className="flex flex-col sm:flex-row">
+                            <dt className="font-medium text-gray-900 sm:w-1/3 capitalize">
+                              {key.replace(/_/g, ' ')}:
+                            </dt>
+                            <dd className="text-gray-700 sm:w-2/3">{value}</dd>
+                          </div>
+                        ))}
                     </dl>
                   </div>
                 </div>
@@ -137,13 +147,21 @@ export default function ItemPage({ params }: PageProps) {
                   <span>💬</span>
                   Contact on WhatsApp
                 </a>
-                <button 
+
+                <button
+                  onClick={() => setShowOfferModal(true)}
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <span>💰</span>
+                  Make an Offer
+                </button>
+
+                <button
                   onClick={handleCartAction}
-                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 ${
-                    itemInCart 
-                      ? 'bg-red-600 hover:bg-red-700 text-white' 
-                      : 'bg-blue-600 hover:bg-blue-700 text-white'
-                  }`}
+                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 ${itemInCart
+                    ? 'bg-red-600 hover:bg-red-700 text-white'
+                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                    }`}
                 >
                   <span>{itemInCart ? '🗑️' : '🛒'}</span>
                   {itemInCart ? 'Remove from Cart' : 'Add to Cart'}
@@ -160,6 +178,13 @@ export default function ItemPage({ params }: PageProps) {
           </div>
         </div>
       </main>
+
+      <OfferModal
+        item={item}
+        isOpen={showOfferModal}
+        onClose={() => setShowOfferModal(false)}
+        onSubmitOffer={handleOfferSubmit}
+      />
     </div>
   );
 }
