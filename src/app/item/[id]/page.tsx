@@ -139,7 +139,20 @@ export default function ItemPage() {
                             <dt className="font-medium text-gray-900 sm:w-1/3 capitalize">
                               {key.replace(/_/g, ' ')}:
                             </dt>
-                            <dd className="text-gray-700 sm:w-2/3">{value}</dd>
+                            <dd className="text-gray-700 sm:w-2/3">
+                              {key === 'url' && value && value.startsWith('http') ? (
+                                <a
+                                  href={value}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-600 hover:text-blue-800 underline break-all"
+                                >
+                                  {value}
+                                </a>
+                              ) : (
+                                value
+                              )}
+                            </dd>
                           </div>
                         ))}
                     </dl>
