@@ -1,148 +1,364 @@
 [
   {
-    "id": 1,
-    "name": "Samsung Refrigerator",
-    "description": "Large stainless steel Samsung refrigerator with french doors and bottom freezer. Great condition, barely used for 2 years. Energy efficient with ice maker and water dispenser.",
-    "price": 800,
-    "condition": "Excellent",
-    "category": "Appliances",
+    "id": 8,
+    "name": "BOSCH easy impact 600",
+    "description": "Reliable Bosch impact driver, perfect for DIY projects and professional use. Compact design with good performance for various drilling and screwing tasks.",
+    "price": 20,
+    "condition": "Good",
+    "category": "Tools",
     "assets": [
-      "/images/fridge-1.jpg",
-      "/images/fridge-2.jpg",
-      "/images/fridge-3.jpg"
-    ],
-    "specifications": {
-      "brand": "Samsung",
-      "model": "RF23R6301SR",
-      "capacity": "23 cu ft",
-      "dimensions": "70\" H x 36\" W x 32\" D"
-    }
-  },
-  {
-    "id": 2,
-    "name": "Bosch Dishwasher",
-    "description": "High-quality Bosch dishwasher with stainless steel interior. Very quiet operation and excellent cleaning performance. Perfect for small to medium families.",
-    "price": 450,
-    "condition": "Very Good",
-    "category": "Appliances",
-    "assets": [
-      "/images/dishwasher-1.jpg",
-      "/images/dishwasher-2.jpg"
+      "/assets/drill0.jpeg",
+      "/assets/drill1.jpeg"
     ],
     "specifications": {
       "brand": "Bosch",
-      "model": "SHPM65W55N",
-      "capacity": "16 place settings",
-      "energy_rating": "Energy Star"
+      "model": "EasyImpact 600",
+      "url": "https://www.bosch-diy.com/za/en/p/easyimpact-600-0603133000",
+      "note": "Online Shop, or give to someone"
     }
   },
   {
-    "id": 3,
-    "name": "West Elm Dining Table",
-    "description": "Beautiful solid wood dining table from West Elm. Seats 6 people comfortably. Minor scratches but overall in great condition. Perfect for a new home.",
-    "price": 600,
+    "id": 9,
+    "name": "Simfer 4552 Oven 45L",
+    "description": "45L mini oven with yogurt making function, glass door, and turbo function. Perfect for small kitchens or as a secondary oven.",
+    "price": 30,
     "condition": "Good",
-    "category": "Furniture",
+    "category": "Appliances",
     "assets": [
-      "/images/dining-table-1.jpg",
-      "/images/dining-table-2.jpg",
-      "/images/dining-table-3.jpg"
+      "/assets/oven0.jpeg"
     ],
     "specifications": {
-      "brand": "West Elm",
-      "material": "Solid Wood",
-      "dimensions": "72\" L x 36\" W x 30\" H",
-      "seats": "6 people"
+      "brand": "Simfer",
+      "model": "4552",
+      "capacity": "45L",
+      "features": "Yogurt making function, glass door, turbo",
+      "url": "https://www.hepsiburada.com/simfer-4552-yogurt-yapma-fonksiyonlu-camli-kapak-turbo-beyaz-45-lt-midi-firin-p-HBV00000458OS",
+      "note": "online shop, or 2nd hand store"
     }
   },
   {
-    "id": 4,
-    "name": "IKEA KALLAX Bookshelf",
-    "description": "White KALLAX 4x4 bookshelf unit with some storage boxes included. Great for organizing books, decorative items, or storage. Easy to assemble and move.",
-    "price": 80,
+    "id": 10,
+    "name": "Simfer 3010 D Stove",
+    "description": "Reliable gas stove from Simfer, perfect for cooking needs. Good condition and ready for immediate use.",
+    "price": 50,
     "condition": "Good",
+    "category": "Appliances",
+    "assets": [],
+    "specifications": {
+      "brand": "Simfer",
+      "model": "3010 D",
+      "url": "https://www.hepsiburada.com/simfer-3010-d-ocak-pm-mt53005",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Coffee Table + TV Table",
+    "description": "Set of coffee table and TV table, perfect for living room setup. Excellent condition and ready to use.",
+    "price": 50,
+    "condition": "Excellent",
     "category": "Furniture",
     "assets": [
-      "/images/bookshelf-1.jpg",
-      "/images/bookshelf-2.jpg"
+      "/assets/table1.jpeg",
+      "/assets/table2.jpeg",
+      "/assets/table3.jpeg",
+      "/assets/table4.jpeg",
+      "/assets/table8.jpeg",
+      "/assets/table9.jpeg"
     ],
     "specifications": {
-      "brand": "IKEA",
-      "model": "KALLAX",
-      "dimensions": "57⅞\" x 57⅞\" x 15⅜\"",
-      "compartments": "16"
+      "type": "Coffee table and TV table set",
+      "note": "online shop, or 2nd hand store"
     }
   },
   {
-    "id": 5,
-    "name": "LG Washer & Dryer Set",
-    "description": "Matching LG front-loading washer and dryer set. Energy efficient and high capacity. Perfect for families. Includes all necessary hoses and connections.",
-    "price": 1200,
+    "id": 12,
+    "name": "Axen 55' TV",
+    "description": "55-inch Axen television in excellent condition. Great picture quality and perfect for home entertainment.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "Electronics",
+    "assets": [
+      "/assets/tv.jpeg",
+      "/assets/tv1.jpeg",
+      "/assets/tv2.jpeg"
+    ],
+    "specifications": {
+      "brand": "Axen",
+      "size": "55 inches",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 13,
+    "name": "L Shape Couch",
+    "description": "Comfortable L-shaped sectional couch in excellent condition. Perfect for living room seating and relaxation.",
+    "price": 100,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [
+      "/assets/couch0.jpeg",
+      "/assets/couch1.jpeg",
+      "/assets/couch2.jpeg",
+      "/assets/couch3.jpeg",
+      "/assets/couch4.jpeg",
+      "/assets/couch5.jpeg"
+    ],
+    "specifications": {
+      "type": "L-shaped sectional",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Photo Frames",
+    "description": "Collection of photo frames in good condition. Perfect for displaying your favorite memories.",
+    "price": 0,
+    "condition": "Good",
+    "category": "Home Decor",
+    "assets": [],
+    "specifications": {
+      "type": "Photo frames collection",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Bedroom Closet and Attachments",
+    "description": "Bedroom closet with various attachments for storage organization. Functional and ready for use.",
+    "price": 50,
+    "condition": "OK",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "type": "Bedroom storage solution",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Dish Washer Vestel Bm 4202 Wifi 4 Programlı",
+    "description": "Modern Vestel dishwasher with WiFi connectivity and 4 different washing programs. Excellent condition and energy efficient.",
+    "price": 200,
     "condition": "Excellent",
     "category": "Appliances",
     "assets": [
-      "/images/washer-dryer-1.jpg",
-      "/images/washer-dryer-2.jpg",
-      "/images/washer-dryer-3.jpg"
+      "/assets/DW0.jpeg",
+      "/assets/DW1.jpeg",
+      "/assets/DW2.jpeg",
+      "/assets/DW3.jpeg"
     ],
     "specifications": {
-      "brand": "LG",
-      "type": "Front Loading",
-      "capacity": "4.5 cu ft washer, 7.4 cu ft dryer",
-      "features": "Steam, Smart Diagnosis"
+      "brand": "Vestel",
+      "model": "BM 4202",
+      "features": "WiFi, 4 programs",
+      "url": "https://www.pttavm.com/vestel-bm-4202-wifi-4-programli-bulasik-makinesi-p-968824896",
+      "note": "online shop, or 2nd hand store"
     }
   },
   {
-    "id": 6,
-    "name": "Sony 55\" 4K TV",
-    "description": "Sony Bravia 55-inch 4K HDR Smart TV. Excellent picture quality with vibrant colors. Includes original remote and stand. Wall mount bracket included.",
-    "price": 400,
-    "condition": "Very Good",
-    "category": "Electronics",
-    "assets": [
-      "/images/tv-1.jpg",
-      "/images/tv-2.jpg"
-    ],
-    "specifications": {
-      "brand": "Sony",
-      "model": "XBR-55X800H",
-      "size": "55 inches",
-      "resolution": "4K HDR"
-    }
-  },
-  {
-    "id": 7,
-    "name": "Queen Mattress & Box Spring",
-    "description": "Comfortable queen-size mattress with matching box spring. Medium-firm support, great for back health. Clean and well-maintained. 3 years old.",
+    "id": 17,
+    "name": "Fridge Vestel NF45011 402 Lt No-Frost",
+    "description": "Large 402L No-Frost refrigerator from Vestel. Excellent condition with energy-efficient design and spacious interior.",
     "price": 300,
-    "condition": "Good",
-    "category": "Furniture",
+    "condition": "Excellent",
+    "category": "Appliances",
     "assets": [
-      "/images/mattress-1.jpg",
-      "/images/mattress-2.jpg"
+      "/assets/fridge0.jpeg",
+      "/assets/fridge1.jpeg",
+      "/assets/fridge2.jpeg",
+      "/assets/fridge3.jpeg",
+      "/assets/fridge11.jpeg",
+      "/assets/fridge12.jpeg",
+      "/assets/fridge13.jpeg"
     ],
     "specifications": {
-      "size": "Queen (60\" x 80\")",
-      "firmness": "Medium-Firm",
-      "type": "Memory Foam Hybrid",
-      "age": "3 years"
+      "brand": "Vestel",
+      "model": "NF45011",
+      "capacity": "402 Lt",
+      "type": "No-Frost",
+      "url": "https://www.hepsiburada.com/vestel-nf45011-g-402-lt-no-frost-buzdolabi-p-HBCV000064H60P",
+      "note": "online shop, or 2nd hand store"
     }
   },
   {
-    "id": 8,
-    "name": "Kitchen Island Cart",
-    "description": "Mobile kitchen island with butcher block top and storage underneath. Perfect for extra counter space and storage. Wheels lock in place.",
-    "price": 200,
+    "id": 18,
+    "name": "Water Boiler",
+    "description": "Electric water boiler in excellent condition. Fast heating and reliable for daily use.",
+    "price": 20,
+    "condition": "Excellent",
+    "category": "Appliances",
+    "assets": [],
+    "specifications": {
+      "type": "Electric water boiler",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Vacuum Cleaner Philips",
+    "description": "Philips PowerPro Compact bagless vacuum cleaner. Good suction power and compact design for easy storage.",
+    "price": 120,
     "condition": "Good",
-    "category": "Furniture",
+    "category": "Appliances",
     "assets": [
-      "/images/kitchen-cart-1.jpg",
-      "/images/kitchen-cart-2.jpg"
+      "/assets/vc1.jpeg",
+      "/assets/vc2.jpeg"
     ],
     "specifications": {
-      "material": "Butcher Block Top",
-      "dimensions": "48\" L x 24\" W x 36\" H",
-      "features": "Rolling wheels, Storage shelves"
+      "brand": "Philips",
+      "model": "PowerPro Compact FC9323",
+      "type": "Bagless",
+      "url": "https://www.hepsiburada.com/philips-powerpro-compact-fc9323-07-toz-torbasiz-elektrikli-supurge-p-EVPHFC9323",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Fan",
+    "description": "Electric fan in good condition. Provides good airflow for cooling during warm weather.",
+    "price": 10,
+    "condition": "Good",
+    "category": "Appliances",
+    "assets": [
+      "/assets/fan-0.jpeg"
+    ],
+    "specifications": {
+      "type": "Electric fan",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Air Cooler",
+    "description": "Arcelik air cooler in excellent condition. Energy-efficient cooling solution for hot weather.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "Appliances",
+    "assets": [
+      "/assets/water-cooler-0.jpeg",
+      "/assets/water-cooler-1.jpeg",
+      "/assets/water-cooler-2.jpeg"
+    ],
+    "specifications": {
+      "brand": "Arcelik",
+      "model": "AC 6030",
+      "type": "Air cooler",
+      "url": "https://www.trendyol.com/arcelik/ac-6030-havadar-hava-serinletici-p-43323488",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Carpets",
+    "description": "Collection of carpets in OK condition. Various sizes available for different rooms.",
+    "price": 0,
+    "condition": "OK",
+    "category": "Home Decor",
+    "assets": [],
+    "specifications": {
+      "type": "Carpet collection",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Office Desk",
+    "description": "Office desk in excellent condition. Perfect for home office or study space setup.",
+    "price": 30,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "type": "Office desk",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Work Monitor",
+    "description": "Samsung 24-inch Full HD IPS LED monitor with FreeSync technology. Excellent condition and perfect for work or gaming.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "Electronics",
+    "assets": [],
+    "specifications": {
+      "brand": "Samsung",
+      "model": "LF24T450FQR",
+      "size": "24 inches",
+      "resolution": "Full HD",
+      "features": "IPS, FreeSync, 75Hz",
+      "url": "https://www.hepsiburada.com/samsung-lf24t450fqrxuf-24-75hz-5ms-hdmi-display-freesync-full-hd-ips-led-monitor-pm-HBC000007NLO0",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 25,
+    "name": "4 Different Shelves",
+    "description": "Set of 4 different shelves in excellent condition. Perfect for storage and organization in any room.",
+    "price": 80,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "type": "Shelf set",
+      "quantity": "4 pieces",
+      "note": "online shop, or 2nd hand store"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Keyboard Org + Its Stand",
+    "description": "Casio CT-X700C2 61-key electronic keyboard with piano-style sensitivity and included stand. Perfect for music learning and practice.",
+    "price": 120,
+    "condition": "Excellent",
+    "category": "Musical Instruments",
+    "assets": [
+      "/assets/org0.jpeg",
+      "/assets/org1.jpeg",
+      "/assets/org3.jpeg",
+      "/assets/ogr2.jpeg"
+    ],
+    "specifications": {
+      "brand": "Casio",
+      "model": "CT-X700C2",
+      "keys": "61",
+      "features": "Piano-style sensitivity, adapter included",
+      "url": "https://www.zuhalmuzik.com/casio-ct-x700c2-61-tus-piyano-stili-hassasiyetli-standart-org-adaptor-dahil-ct-x700c2",
+      "note": "online shop, or Give it"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Office Chair",
+    "description": "Techno Rest ergonomic office chair with file back support. Comfortable and adjustable for long working hours.",
+    "price": 80,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "brand": "Techno Rest",
+      "type": "Ergonomic office chair",
+      "features": "File back support",
+      "dimensions": "65x110-120x67 cm",
+      "url": "https://www.adoremobilya.com/techno-rest-file-sirtli-calisma-koltugu-bej-gri-65x110-120x67-cm-gxyxd-3986",
+      "note": "Online shop"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Food Table",
+    "description": "Dining table in excellent condition. Perfect for meals and gatherings with family and friends.",
+    "price": 60,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [
+      "/assets/food-table-0.jpeg",
+      "/assets/food-table-1.jpeg"
+    ],
+    "specifications": {
+      "type": "Dining table",
+      "note": "online shop, or 2nd hand store"
     }
   }
 ]

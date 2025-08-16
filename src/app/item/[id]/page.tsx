@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
 import OfferModal from '@/components/OfferModal';
 import itemsData from '@/data/items.json';
@@ -80,17 +81,29 @@ export default function ItemPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="p-6">
               <div className="space-y-4">
-                {item.assets.map((asset, index) => (
-                  <div key={index} className="relative h-80 bg-gray-200 rounded-lg overflow-hidden">
+                {item.assets && item.assets.length > 0 ? (
+                  item.assets.map((asset, index) => (
+                    <div key={index} className="relative h-80 bg-gray-200 rounded-lg overflow-hidden">
+                      <Image
+                        src={asset}
+                        alt={`${item.name} - Image ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <div className="relative h-80 bg-gray-200 rounded-lg overflow-hidden">
                     <div className="flex items-center justify-center h-full text-gray-400">
                       <div className="text-center">
                         <div className="text-6xl mb-4">📷</div>
                         <span className="text-lg">{item.name}</span>
-                        <div className="text-sm mt-2">Image {index + 1}</div>
+                        <div className="text-sm mt-2">No images available</div>
                       </div>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
 
