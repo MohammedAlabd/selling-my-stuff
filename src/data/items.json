@@ -236,9 +236,9 @@
     "condition": "Excellent",
     "category": "Appliances",
     "assets": [
-      "/assets/water-cooler-0.jpeg",
-      "/assets/water-cooler-1.jpeg",
-      "/assets/water-cooler-2.jpeg"
+      "/assets/air-cooler-0.jpeg",
+      "/assets/air-cooler-1.jpeg",
+      "/assets/air-cooler-2.jpeg"
     ],
     "specifications": {
       "brand": "Arcelik",
