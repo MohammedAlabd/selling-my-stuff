@@ -1,10 +1,12 @@
 [
   {
     "id": 8,
-    "name": "BOSCH easy impact 600",
+    "asGoodAsNew": true,
+    "soldOut": false,
+    "name": "BOSCH easy impact 600 Drill",
     "description": "Reliable Bosch impact driver, perfect for DIY projects and professional use. Compact design with good performance for various drilling and screwing tasks.",
     "price": 20,
-    "condition": "Good",
+    "condition": "excellent",
     "category": "Tools",
     "assets": [
       "/assets/drill0.jpeg",
@@ -14,11 +16,12 @@
       "brand": "Bosch",
       "model": "EasyImpact 600",
       "url": "https://www.bosch-diy.com/za/en/p/easyimpact-600-0603133000",
-      "note": "Online Shop, or give to someone"
+      "note": "Only used for a couple of hours, and it has different drill bits and screwdriver bits. It is in excellent condition."
     }
   },
   {
     "id": 9,
+    "soldOut": true,
     "name": "Simfer 4552 Oven 45L",
     "description": "45L mini oven with yogurt making function, glass door, and turbo function. Perfect for small kitchens or as a secondary oven.",
     "price": 30,
@@ -33,22 +36,27 @@
       "capacity": "45L",
       "features": "Yogurt making function, glass door, turbo",
       "url": "https://www.hepsiburada.com/simfer-4552-yogurt-yapma-fonksiyonlu-camli-kapak-turbo-beyaz-45-lt-midi-firin-p-HBV00000458OS",
-      "note": "online shop, or 2nd hand store"
+      "note": "Bought new, used for a couple of years, but still in good condition."
     }
   },
   {
     "id": 10,
+    "soldOut": false,
     "name": "Simfer 3010 D Stove",
     "description": "Reliable gas stove from Simfer, perfect for cooking needs. Good condition and ready for immediate use.",
     "price": 50,
     "condition": "Good",
     "category": "Appliances",
-    "assets": [],
+    "assets": [
+      "/assets/Stove0.jpeg",
+      "/assets/Stove1.jpeg",
+      "/assets/Stove2.jpeg"
+    ],
     "specifications": {
       "brand": "Simfer",
       "model": "3010 D",
       "url": "https://www.hepsiburada.com/simfer-3010-d-ocak-pm-mt53005",
-      "note": "online shop, or 2nd hand store"
+      "note": "Bought new, used for a couple of years, but still in good condition."
     }
   },
   {
@@ -68,7 +76,7 @@
     ],
     "specifications": {
       "type": "Coffee table and TV table set",
-      "note": "online shop, or 2nd hand store"
+      "note": "In a very good condition, the price is negotiable"
     }
   },
   {
@@ -76,7 +84,7 @@
     "name": "Axen 55' TV",
     "description": "55-inch Axen television in excellent condition. Great picture quality and perfect for home entertainment.",
     "price": 50,
-    "condition": "Excellent",
+    "condition": "Good",
     "category": "Electronics",
     "assets": [
       "/assets/tv.jpeg",
@@ -86,7 +94,7 @@
     "specifications": {
       "brand": "Axen",
       "size": "55 inches",
-      "note": "online shop, or 2nd hand store"
+      "note": "3 HDMI, good condition 2K TV"
     }
   },
   {
@@ -94,7 +102,7 @@
     "name": "L Shape Couch",
     "description": "Comfortable L-shaped sectional couch in excellent condition. Perfect for living room seating and relaxation.",
     "price": 100,
-    "condition": "Excellent",
+    "condition": "Good",
     "category": "Furniture",
     "assets": [
       "/assets/couch0.jpeg",
@@ -106,20 +114,7 @@
     ],
     "specifications": {
       "type": "L-shaped sectional",
-      "note": "online shop, or 2nd hand store"
-    }
-  },
-  {
-    "id": 14,
-    "name": "Photo Frames",
-    "description": "Collection of photo frames in good condition. Perfect for displaying your favorite memories.",
-    "price": 0,
-    "condition": "Good",
-    "category": "Home Decor",
-    "assets": [],
-    "specifications": {
-      "type": "Photo frames collection",
-      "note": "online shop, or 2nd hand store"
+      "note": "Good condition"
     }
   },
   {
@@ -132,11 +127,12 @@
     "assets": [],
     "specifications": {
       "type": "Bedroom storage solution",
-      "note": "online shop, or 2nd hand store"
+      "note": "bought secnond hand, still functional, but not in perfect condition, I can give it for free if you buy something else"
     }
   },
   {
     "id": 16,
+    "asGoodAsNew": true,
     "name": "Dish Washer Vestel Bm 4202 Wifi 4 Programlı",
     "description": "Modern Vestel dishwasher with WiFi connectivity and 4 different washing programs. Excellent condition and energy efficient.",
     "price": 200,
@@ -153,11 +149,12 @@
       "model": "BM 4202",
       "features": "WiFi, 4 programs",
       "url": "https://www.pttavm.com/vestel-bm-4202-wifi-4-programli-bulasik-makinesi-p-968824896",
-      "note": "online shop, or 2nd hand store"
+      "note": "Bought it new, used if for a couple of years, but it is in excellent condition. It has WiFi connectivity and 4 different washing programs."
     }
   },
   {
     "id": 17,
+    "asGoodAsNew": true,
     "name": "Fridge Vestel NF45011 402 Lt No-Frost",
     "description": "Large 402L No-Frost refrigerator from Vestel. Excellent condition with energy-efficient design and spacious interior.",
     "price": 300,
@@ -178,7 +175,7 @@
       "capacity": "402 Lt",
       "type": "No-Frost",
       "url": "https://www.hepsiburada.com/vestel-nf45011-g-402-lt-no-frost-buzdolabi-p-HBCV000064H60P",
-      "note": "online shop, or 2nd hand store"
+      "note": "Bought it new, used if for over a year, but it is in excellent condition. It has WiFi connectivity and 4 different washing programs."
     }
   },
   {
@@ -186,19 +183,19 @@
     "name": "Water Boiler",
     "description": "Electric water boiler in excellent condition. Fast heating and reliable for daily use.",
     "price": 20,
-    "condition": "Excellent",
+    "condition": "OK",
     "category": "Appliances",
     "assets": [],
     "specifications": {
       "type": "Electric water boiler",
-      "note": "online shop, or 2nd hand store"
+      "note": "It is clean, and works pretty well, it has two modes, one for boiling water, and one keeping water warm"
     }
   },
   {
     "id": 19,
     "name": "Vacuum Cleaner Philips",
     "description": "Philips PowerPro Compact bagless vacuum cleaner. Good suction power and compact design for easy storage.",
-    "price": 120,
+    "price": 100,
     "condition": "Good",
     "category": "Appliances",
     "assets": [
@@ -210,7 +207,7 @@
       "model": "PowerPro Compact FC9323",
       "type": "Bagless",
       "url": "https://www.hepsiburada.com/philips-powerpro-compact-fc9323-07-toz-torbasiz-elektrikli-supurge-p-EVPHFC9323",
-      "note": "online shop, or 2nd hand store"
+      "note": "Good and powerful vacumm cleaner, bought it new, used it for a couple of years, but it is in good condition."
     }
   },
   {
@@ -225,11 +222,12 @@
     ],
     "specifications": {
       "type": "Electric fan",
-      "note": "online shop, or 2nd hand store"
+      "note": "Good condition, works well"
     }
   },
   {
     "id": 21,
+    "asGoodAsNew": true,
     "name": "Air Cooler",
     "description": "Arcelik air cooler in excellent condition. Energy-efficient cooling solution for hot weather.",
     "price": 50,
@@ -245,7 +243,7 @@
       "model": "AC 6030",
       "type": "Air cooler",
       "url": "https://www.trendyol.com/arcelik/ac-6030-havadar-hava-serinletici-p-43323488",
-      "note": "online shop, or 2nd hand store"
+      "note": "bought it new, used if for two summers only, and very minimal use"
     }
   },
   {
@@ -258,7 +256,7 @@
     "assets": [],
     "specifications": {
       "type": "Carpet collection",
-      "note": "online shop, or 2nd hand store"
+      "note": "one white, and one colored, mostly red, I am willing to give them for free if you need them"
     }
   },
   {
@@ -268,10 +266,15 @@
     "price": 30,
     "condition": "Excellent",
     "category": "Furniture",
-    "assets": [],
+    "assets": [
+      "/assets/desk0.jpeg",
+      "/assets/desk1.jpeg",
+      "/assets/desk2.jpeg",
+      "/assets/desk3.jpeg"
+    ],
     "specifications": {
       "type": "Office desk",
-      "note": "online shop, or 2nd hand store"
+      "note": "Excellent condition, perfect for home office or study space setup"
     }
   },
   {
@@ -281,7 +284,12 @@
     "price": 50,
     "condition": "Excellent",
     "category": "Electronics",
-    "assets": [],
+    "assets": [
+      "/assets/monitor0.jpeg",
+      "/assets/monitor1.jpeg",
+      "/assets/monitor2.jpeg",
+      "/assets/monitor3.jpeg"
+    ],
     "specifications": {
       "brand": "Samsung",
       "model": "LF24T450FQR",
@@ -289,25 +297,61 @@
       "resolution": "Full HD",
       "features": "IPS, FreeSync, 75Hz",
       "url": "https://www.hepsiburada.com/samsung-lf24t450fqrxuf-24-75hz-5ms-hdmi-display-freesync-full-hd-ips-led-monitor-pm-HBC000007NLO0",
-      "note": "online shop, or 2nd hand store"
+      "note": "Excellent condition, perfect for home office or study space setup"
     }
   },
   {
-    "id": 25,
-    "name": "4 Different Shelves",
-    "description": "Set of 4 different shelves in excellent condition. Perfect for storage and organization in any room.",
-    "price": 80,
+    "id": 50,
+    "asGoodAsNew": true,
+    "name": "Shelf 1",
+    "description": "Perfect for storage and organization in any room, 5 stories shelf in excellent condition",
+    "price": 15,
     "condition": "Excellent",
     "category": "Furniture",
     "assets": [],
     "specifications": {
-      "type": "Shelf set",
-      "quantity": "4 pieces",
-      "note": "online shop, or 2nd hand store"
+      "note": "5 stories shelf"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Shelf 2",
+    "description": "Perfect for storage and organization in a kitchen or a room, 3 stories with extention net",
+    "price": 15,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "note": "kithchen shelf shelf"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Shelf 3",
+    "description": "Perfect for storage and organization in a bathroom over washing machine, 4 stories shelf",
+    "price": 15,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "note": "bathroom shelf shelf"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Shelf 4",
+    "description": "Perfect for storage and organization in any room, 4 stories small shelf in excellent condition",
+    "price": 15,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "note": "4 stories shelf"
     }
   },
   {
     "id": 26,
+    "asGoodAsNew": true,
     "name": "Keyboard Org + Its Stand",
     "description": "Casio CT-X700C2 61-key electronic keyboard with piano-style sensitivity and included stand. Perfect for music learning and practice.",
     "price": 120,
@@ -325,7 +369,7 @@
       "keys": "61",
       "features": "Piano-style sensitivity, adapter included",
       "url": "https://www.zuhalmuzik.com/casio-ct-x700c2-61-tus-piyano-stili-hassasiyetli-standart-org-adaptor-dahil-ct-x700c2",
-      "note": "online shop, or Give it"
+      "note": "Bought new, used for les than 10 hours, in excellent condition. It has 61 keys with piano-style sensitivity, and it comes with a stand and an adapter."
     }
   },
   {
@@ -335,22 +379,27 @@
     "price": 80,
     "condition": "Excellent",
     "category": "Furniture",
-    "assets": [],
+    "assets": [
+      "/assets/office-chair-0.jpeg",
+      "/assets/office-chair-2.jpeg",
+      "/assets/office-chair-3.jpeg",
+      "/assets/office-chair-4.jpeg"
+    ],
     "specifications": {
       "brand": "Techno Rest",
       "type": "Ergonomic office chair",
       "features": "File back support",
       "dimensions": "65x110-120x67 cm",
       "url": "https://www.adoremobilya.com/techno-rest-file-sirtli-calisma-koltugu-bej-gri-65x110-120x67-cm-gxyxd-3986",
-      "note": "Online shop"
+      "note": "Bought new, used for one year, but still in excellent condition."
     }
   },
   {
     "id": 29,
     "name": "Food Table",
-    "description": "Dining table in excellent condition. Perfect for meals and gatherings with family and friends.",
-    "price": 60,
-    "condition": "Excellent",
+    "description": "Dining table with 4 chairs.",
+    "price": 10,
+    "condition": "OK",
     "category": "Furniture",
     "assets": [
       "/assets/food-table-0.jpeg",
@@ -358,6 +407,19 @@
     ],
     "specifications": {
       "type": "Dining table",
+      "note": "The table is in good conditoin, however, the chairs are not, 2 of them are broken."
+    }
+  },
+  {
+    "id": 14,
+    "name": "Photo Frames",
+    "description": "Collection of photo frames in good condition. Perfect for displaying your favorite memories.",
+    "price": 0,
+    "condition": "Good",
+    "category": "Home Decor",
+    "assets": [],
+    "specifications": {
+      "type": "Photo frames collection",
       "note": "online shop, or 2nd hand store"
     }
   }

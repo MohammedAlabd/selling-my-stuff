@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 interface Item {
   id: number;
+  asGoodAsNew?: boolean;
+  soldOut?: boolean;
   name: string;
   description: string;
   price: number;
@@ -23,8 +25,8 @@ export default function ItemCard({ item }: ItemCardProps) {
   const firstImage = hasImages ? item.assets[0] : null;
 
   return (
-    <Link href={`/item/${item.id}`} className="group">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <Link href={item.soldOut ? '#' : `/item/${item.id}`} className={`group ${item.soldOut ? 'pointer-events-none' : ''}`}>
+      <div className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${item.soldOut ? 'opacity-60' : ''}`}>
         <div className="relative h-64 bg-gray-200">
           {hasImages && firstImage ? (
             <Image
@@ -42,6 +44,22 @@ export default function ItemCard({ item }: ItemCardProps) {
               </div>
             </div>
           )}
+
+          {/* As Good As New Badge */}
+          {item.asGoodAsNew && (
+            <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold shadow-md">
+              As Good As New
+            </div>
+          )}
+
+          {/* Sold Out Overlay */}
+          {item.soldOut && (
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-red-600 text-white text-lg font-bold px-4 py-2 rounded-lg shadow-lg">
+                SOLD OUT
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="p-4">
@@ -49,7 +67,7 @@ export default function ItemCard({ item }: ItemCardProps) {
             <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
               {item.name}
             </h3>
-            <span className="text-xl font-bold text-green-600">
+            <span className={`text-xl font-bold ${item.soldOut ? 'text-gray-400 line-through' : 'text-green-600'}`}>
               ${item.price}
             </span>
           </div>
