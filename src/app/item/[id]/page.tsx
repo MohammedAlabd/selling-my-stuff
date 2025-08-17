@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
 import { useTranslation } from '@/context/I18nContext';
 import OfferModal from '@/components/OfferModal';
+import ImageModal from '@/components/ImageModal';
 import LanguageToggle from '@/components/LanguageToggle';
 
 interface Item {
@@ -28,6 +29,7 @@ export default function ItemPage() {
   const { addItem, removeItem, isInCart, getItemCount } = useCart();
   const { t, isRTL, items, loading, translateCategory } = useTranslation();
   const [showOfferModal, setShowOfferModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const item: Item | undefined = items.find((item) => item.id === parseInt(id));
 
   const translateCondition = (condition: string) => {
@@ -105,7 +107,11 @@ export default function ItemPage() {
               <div className="space-y-4">
                 {item.assets && item.assets.length > 0 ? (
                   item.assets.map((asset, index) => (
-                    <div key={index} className="relative h-80 bg-gray-200 rounded-lg overflow-hidden">
+                    <div
+                      key={index}
+                      className="relative h-80 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                      onClick={() => setSelectedImage({ src: asset, alt: `${item.name} - Image ${index + 1}` })}
+                    >
                       <Image
                         src={asset}
                         alt={`${item.name} - Image ${index + 1}`}
@@ -113,6 +119,11 @@ export default function ItemPage() {
                         className="object-scale-down"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-20 transition-opacity bg-black bg-opacity-20">
+                        <div className="bg-white bg-opacity-90 rounded-full p-2">
+                          <span className="text-gray-700 opacity-100 text-lg">🔍</span>
+                        </div>
+                      </div>
                     </div>
                   ))
                 ) : (
@@ -231,6 +242,13 @@ export default function ItemPage() {
         isOpen={showOfferModal}
         onClose={() => setShowOfferModal(false)}
         onSubmitOffer={handleOfferSubmit}
+      />
+
+      <ImageModal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ''}
+        imageAlt={selectedImage?.alt || ''}
       />
     </div>
   );
