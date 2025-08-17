@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useTranslation } from '@/context/I18nContext';
@@ -141,8 +142,19 @@ export default function CartPage() {
               {cart.items.map((item) => (
                 <div key={item.id} className={`flex items-center justify-between p-4 border border-gray-200 rounded-lg ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <div className={`flex items-center space-x-4 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                    <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
-                      <span className="text-2xl">📷</span>
+                    <div className="relative w-16 h-16 bg-gray-200 rounded-lg overflow-hidden">
+                      {item.assets && item.assets.length > 0 ? (
+                        <Image
+                          src={item.assets[0]}
+                          alt={item.name}
+                          fill
+                          className="object-scale-down"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <span className="text-2xl">📷</span>
+                        </div>
+                      )}
                     </div>
                     <div className={isRTL ? 'text-right' : 'text-left'}>
                       <h3 className="font-semibold text-gray-900">{item.name}</h3>
