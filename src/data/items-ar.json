@@ -480,5 +480,42 @@
       "type": "مجموعة إطارات صور",
       "note": "متجر إلكتروني أو متجر مستعمل"
     }
+  },
+  {
+    "id": 54,
+    "asGoodAsNew": false,
+    "soldOut": false,
+    "name": "مرتبة لوفو ريلاكس كلين 150×200 سم",
+    "description": "مرتبة لوفو ريلاكس كلين في حالة ممتازة. مقاس 150×200 سم، ",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "https://37e69e.a-cdn.akinoncloud.com/products/2022/07/18/4335/5c157fcb-955f-41f4-8f9c-39afcc4d4c12_size669x446_quality90.jpg"
+    ],
+    "specifications": {
+      "brand": "Lovo",
+      "model": "Relax Clean",
+      "size": "150×200 سم",
+      "url": "https://www.lovayatak.com/beyaz-relax-clean-yatak-lv-relaxclean-yatak-1/?integration_EBAT_2=37&integration_ANARENK=1&srsltid=AfmBOooKM-oBjIPBMccS6IRDSLmiWCvcLhUMwOtBtCMgRFYzxEifVFV_",
+      "note": ""
+    }
+  },
+  {
+    "id": 55,
+    "asGoodAsNew": false,
+    "soldOut": false,
+    "name": "مرتبة سرير فردي إيكيا",
+    "description": "مرتبة سرير فردي إيكيا في حالة جيدة. مثالية للسرير الفردي أو غرفة الضيوف.",
+    "price": 40,
+    "condition": "Good",
+    "category": "أثاث",
+    "assets": [],
+    "specifications": {
+      "brand": "Ikea",
+      "type": "مرتبة سرير فردي",
+      "url": "",
+      "note": ""
+    }
   }
 ]

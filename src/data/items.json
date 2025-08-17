@@ -480,5 +480,42 @@
       "type": "Photo frames collection",
       "note": "online shop, or 2nd hand store"
     }
+  },
+  {
+    "id": 54,
+    "asGoodAsNew": false,
+    "soldOut": false,
+    "name": "Lovo relax clean mattress 150x200 cm",
+    "description": "Lovo relax clean mattress in good condition. Size 150x200 cm.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "Furniture",
+    "assets": [
+      "https://37e69e.a-cdn.akinoncloud.com/products/2022/07/18/4335/5c157fcb-955f-41f4-8f9c-39afcc4d4c12_size669x446_quality90.jpg"
+    ],
+    "specifications": {
+      "brand": "Lovo",
+      "model": "Relax Clean",
+      "size": "150x200 cm",
+      "url": "https://www.lovayatak.com/beyaz-relax-clean-yatak-lv-relaxclean-yatak-1/?integration_EBAT_2=37&integration_ANARENK=1&srsltid=AfmBOooKM-oBjIPBMccS6IRDSLmiWCvcLhUMwOtBtCMgRFYzxEifVFV_",
+      "note": ""
+    }
+  },
+  {
+    "id": 55,
+    "asGoodAsNew": false,
+    "soldOut": false,
+    "name": "Ikea Single Bed Mattress",
+    "description": "Ikea single bed mattress in good condition. Perfect for single bed or guest room.",
+    "price": 40,
+    "condition": "Good",
+    "category": "Furniture",
+    "assets": [],
+    "specifications": {
+      "brand": "Ikea",
+      "type": "Single bed mattress",
+      "url": "",
+      "note": ""
+    }
   }
 ]

@@ -480,5 +480,42 @@
             "type": "Fotoğraf çerçevesi koleksiyonu",
             "note": "online mağaza veya ikinci el dükkan"
         }
+    },
+    {
+        "id": 54,
+        "asGoodAsNew": false,
+        "soldOut": false,
+        "name": "Lovo relax clean yatak 150x200 cm",
+        "description": "İyi durumda Lovo relax clean yatak. 150x200 cm boyutunda.",
+        "price": 50,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "https://37e69e.a-cdn.akinoncloud.com/products/2022/07/18/4335/5c157fcb-955f-41f4-8f9c-39afcc4d4c12_size669x446_quality90.jpg"
+        ],
+        "specifications": {
+            "brand": "Lovo",
+            "model": "Relax Clean",
+            "size": "150x200 cm",
+            "url": "https://www.lovayatak.com/beyaz-relax-clean-yatak-lv-relaxclean-yatak-1/?integration_EBAT_2=37&integration_ANARENK=1&srsltid=AfmBOooKM-oBjIPBMccS6IRDSLmiWCvcLhUMwOtBtCMgRFYzxEifVFV_",
+            "note": ""
+        }
+    },
+    {
+        "id": 55,
+        "asGoodAsNew": false,
+        "soldOut": false,
+        "name": "Ikea Tek Kişilik Yatak",
+        "description": "İyi durumda Ikea tek kişilik yatak. Tek kişilik yatak veya misafir odası için mükemmel.",
+        "price": 40,
+        "condition": "Good",
+        "category": "Mobilya",
+        "assets": [],
+        "specifications": {
+            "brand": "Ikea",
+            "type": "Tek kişilik yatak",
+            "url": "",
+            "note": ""
+        }
     }
 ]
