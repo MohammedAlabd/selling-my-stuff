@@ -157,7 +157,7 @@
   {
     "id": 15,
     "name": "Bedroom Closet, Makup Table, Mirror, Double bed, and two side drawers",
-    "description": "Bedroom closet with various attachments for storage organization. Functional and ready for use.",
+    "description": "Full bedroom furniture, closet with various attachments for storage organization. Functional and ready for use.",
     "price": 50,
     "condition": "OK",
     "category": "Furniture",
@@ -323,6 +323,7 @@
   {
     "id": 24,
     "name": "Work Monitor",
+    "soldOut": true,
     "description": "Samsung 24-inch Full HD IPS LED monitor with FreeSync technology. Excellent condition and perfect for work or gaming.",
     "price": 50,
     "condition": "Excellent",
@@ -433,6 +434,7 @@
   {
     "id": 27,
     "name": "Office Chair",
+    "soldOut": true,
     "description": "Techno Rest ergonomic office chair with file back support. Comfortable and adjustable for long working hours.",
     "price": 80,
     "condition": "Excellent",
@@ -484,7 +486,7 @@
   {
     "id": 54,
     "asGoodAsNew": false,
-    "soldOut": false,
+    "soldOut": true,
     "name": "Lovo relax clean mattress 150x200 cm",
     "description": "Lovo relax clean mattress in good condition. Size 150x200 cm.",
     "price": 50,
