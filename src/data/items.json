@@ -21,7 +21,7 @@
   },
   {
     "id": 9,
-    "soldOut": true,
+    "soldOut": false,
     "name": "Simfer 4552 Oven 45L",
     "description": "45L mini oven with yogurt making function, glass door, and turbo function. Perfect for small kitchens or as a secondary oven.",
     "price": 30,
