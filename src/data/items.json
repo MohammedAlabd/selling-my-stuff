@@ -1,5 +1,41 @@
 [
   {
+    "id": 6,
+    "asGoodAsNew": true,
+    "soldOut": false,
+    "name": "Xiaomi Mi Air Purifier 4",
+    "description": "Xiaomi Mi Air Purifier 4 in excellent condition. Provides clean air with advanced filtration system. Perfect for home or office use.",
+    "price": 75,
+    "condition": "excellent",
+    "category": "Tools",
+    "assets": [
+      "https://cdn.dsmcdn.com/ty434/product/media/images/20220516/11/111973534/480324951/3/3_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty432/product/media/images/20220516/11/111973534/480324951/1/1_org_zoom.jpg"
+    ],
+    "specifications": {
+      "url": "https://www.trendyol.com/xiaomi/mi-air-purifier-4-akilli-hava-temizleyici-beyaz-p-301588538?boutiqueId=614666&merchantId=968",
+      "note": "bought it new, used it for over a year, but it is in excellent condition. It has a HEPA filter, and it is very quiet."
+    }
+  },
+  {
+    "id": 7,
+    "asGoodAsNew": true,
+    "soldOut": false,
+    "name": "Wood Cloth Hanger",
+    "description": "Wooden cloth hanger in excellent condition. Perfect for organizing clothes. Good for small rooms, and airbnbs.",
+    "price": 5,
+    "condition": "excellent",
+    "category": "Tools",
+    "assets": [
+      "https://cdn.dsmcdn.com/ty1530/product/media/images/prod/QC/20240909/16/8cd1df41-e8b1-3eb7-96cf-4e162ed36972/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1534/product/media/images/prod/QC/20240909/16/9dff1a96-0ab3-3690-8a76-8fc8a9f6a6d7/1_org_zoom.jpg"
+    ],
+    "specifications": {
+      "url": "https://www.trendyol.com/wood-bazaar/konfeksiyon-elbise-askilik-iki-rafli-148-x-106-cm-p-201951281?boutiqueId=616759&merchantId=642665",
+      "note": "Good for small rooms, and airbnbs"
+    }
+  },
+  {
     "id": 8,
     "asGoodAsNew": true,
     "soldOut": false,
@@ -50,7 +86,8 @@
     "assets": [
       "/assets/Stove0.jpeg",
       "/assets/Stove1.jpeg",
-      "/assets/Stove2.jpeg"
+      "/assets/Stove2.jpeg",
+      "/assets/Stove3.jpeg"
     ],
     "specifications": {
       "brand": "Simfer",
@@ -89,7 +126,8 @@
     "assets": [
       "/assets/tv.jpeg",
       "/assets/tv1.jpeg",
-      "/assets/tv2.jpeg"
+      "/assets/tv2.jpeg",
+      "/assets/tv00.jpeg"
     ],
     "specifications": {
       "brand": "Axen",
@@ -108,7 +146,6 @@
       "/assets/couch0.jpeg",
       "/assets/couch1.jpeg",
       "/assets/couch2.jpeg",
-      "/assets/couch3.jpeg",
       "/assets/couch4.jpeg",
       "/assets/couch5.jpeg"
     ],
@@ -140,9 +177,9 @@
     "category": "Appliances",
     "assets": [
       "/assets/DW0.jpeg",
-      "/assets/DW1.jpeg",
       "/assets/DW2.jpeg",
-      "/assets/DW3.jpeg"
+      "/assets/DW3.jpeg",
+      "/assets/DW22.jpeg"
     ],
     "specifications": {
       "brand": "Vestel",
@@ -167,7 +204,8 @@
       "/assets/fridge3.jpeg",
       "/assets/fridge11.jpeg",
       "/assets/fridge12.jpeg",
-      "/assets/fridge13.jpeg"
+      "/assets/fridge13.jpeg",
+      "/assets/Fridge00.jpeg"
     ],
     "specifications": {
       "brand": "Vestel",
@@ -185,7 +223,10 @@
     "price": 20,
     "condition": "OK",
     "category": "Appliances",
-    "assets": [],
+    "assets": [
+      "/assets/WB0.jpeg",
+      "/assets/WB1.jpeg"
+    ],
     "specifications": {
       "type": "Electric water boiler",
       "note": "It is clean, and works pretty well, it has two modes, one for boiling water, and one keeping water warm"
@@ -199,6 +240,7 @@
     "condition": "Good",
     "category": "Appliances",
     "assets": [
+      "/assets/VC00.jpeg",
       "/assets/vc1.jpeg",
       "/assets/vc2.jpeg"
     ],
@@ -267,13 +309,14 @@
     "condition": "Excellent",
     "category": "Furniture",
     "assets": [
-      "/assets/desk0.jpeg",
-      "/assets/desk1.jpeg",
-      "/assets/desk2.jpeg",
-      "/assets/desk3.jpeg"
+      "/assets/office-desk-0.jpeg",
+      "/assets/office-desk-1.jpeg",
+      "https://cdn.dsmcdn.com/ty1390/product/media/images/prod/QC/20240628/14/c41681e3-899f-364a-a549-6b106afb3a4f/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1387/product/media/images/prod/QC/20240628/14/37dc59ba-682d-3205-ac1b-e13c8bb78245/1_org_zoom.jpg"
     ],
     "specifications": {
       "type": "Office desk",
+      "url": "https://www.trendyol.com/bofigo/60x120-cm-2-rafli-calisma-masasi-bilgisayar-masasi-ofis-ders-yemek-masasi-beyaz-p-34259746?boutiqueId=616384&merchantId=114166",
       "note": "Excellent condition, perfect for home office or study space setup"
     }
   },
@@ -285,10 +328,10 @@
     "condition": "Excellent",
     "category": "Electronics",
     "assets": [
-      "/assets/monitor0.jpeg",
-      "/assets/monitor1.jpeg",
-      "/assets/monitor2.jpeg",
-      "/assets/monitor3.jpeg"
+      "/assets/monitor-0.jpeg",
+      "/assets/monitor-1.jpeg",
+      "/assets/monitor-2.jpeg",
+      "/assets/monitor-3.jpeg"
     ],
     "specifications": {
       "brand": "Samsung",
@@ -305,10 +348,13 @@
     "asGoodAsNew": true,
     "name": "Shelf 1",
     "description": "Perfect for storage and organization in any room, 5 stories shelf in excellent condition",
-    "price": 15,
+    "price": 10,
     "condition": "Excellent",
     "category": "Furniture",
-    "assets": [],
+    "assets": [
+      "/assets/room-shelf-0.jpeg",
+      "/assets/room-shelf-1.jpeg"
+    ],
     "specifications": {
       "note": "5 stories shelf"
     }
@@ -317,36 +363,48 @@
     "id": 51,
     "name": "Shelf 2",
     "description": "Perfect for storage and organization in a kitchen or a room, 3 stories with extention net",
-    "price": 15,
+    "price": 10,
     "condition": "Excellent",
     "category": "Furniture",
-    "assets": [],
+    "assets": [
+      "/assets/Kitchen-shelf-0.jpeg"
+    ],
     "specifications": {
       "note": "kithchen shelf shelf"
     }
   },
   {
     "id": 52,
+    "asGoodAsNew": true,
     "name": "Shelf 3",
     "description": "Perfect for storage and organization in a bathroom over washing machine, 4 stories shelf",
-    "price": 15,
+    "price": 10,
     "condition": "Excellent",
     "category": "Furniture",
-    "assets": [],
+    "assets": [
+      "https://cdn.dsmcdn.com/ty582/product/media/images/20221031/14/204213311/610298290/1/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty584/product/media/images/20221031/14/204213311/610298290/3/3_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty582/product/media/images/20221031/14/204213311/610298290/5/5_org_zoom.jpg"
+    ],
     "specifications": {
-      "note": "bathroom shelf shelf"
+      "note": "bathroom shelf shelf",
+      "url": "https://www.trendyol.com/pd/tedarikcenter/camasir-makinesi-ustu-3-rafli-duzenleyici-3-katli-cok-amacli-metal-banyo-dolabi-p-377434404?boutiqueId=61&merchantId=183815"
     }
   },
   {
     "id": 53,
     "name": "Shelf 4",
-    "description": "Perfect for storage and organization in any room, 4 stories small shelf in excellent condition",
-    "price": 15,
+    "description": "Perfect for storage and organization for shos, 6 stories small shelf in excellent condition",
+    "price": 10,
     "condition": "Excellent",
     "category": "Furniture",
-    "assets": [],
+    "assets": [
+      "https://cdn.dsmcdn.com/ty1149/product/media/images/prod/SPM/PIM/20240128/15/4a6034b7-28be-38a6-a2fd-62eeb5fafcb7/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1150/product/media/images/prod/SPM/PIM/20240128/15/5f025fbf-3cb5-3dac-ae78-2daac56e7d18/1_org_zoom.jpg"
+    ],
     "specifications": {
-      "note": "4 stories shelf"
+      "note": "6 stories shelf",
+      "url": "https://www.trendyol.com/mudesa/6-rafli-ayakkabilik-metal-ahsap-cok-amacli-raf-ayakkabi-dolabi-p-84043164?boutiqueId=594574&merchantId=226306"
     }
   },
   {

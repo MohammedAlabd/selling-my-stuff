@@ -100,7 +100,7 @@ export default function ItemPage() {
                         src={asset}
                         alt={`${item.name} - Image ${index + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-scale-down"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     </div>
