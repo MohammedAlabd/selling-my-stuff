@@ -13,6 +13,8 @@ import LanguageToggle from '@/components/LanguageToggle';
 
 interface Item {
   id: number;
+  asGoodAsNew?: boolean;
+  soldOut?: boolean;
   name: string;
   description: string;
   price: number;
@@ -116,7 +118,7 @@ export default function ItemPage() {
                         src={asset}
                         alt={`${item.name} - Image ${index + 1}`}
                         fill
-                        className="object-scale-down"
+                        className={`object-scale-down ${item.soldOut ? 'grayscale' : ''}`}
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-20 transition-opacity bg-black bg-opacity-20">
@@ -141,9 +143,18 @@ export default function ItemPage() {
             </div>
 
             <div className="p-6">
+              {/* Sold Out Banner */}
+              {item.soldOut && (
+                <div className="mb-6 bg-red-600 text-white text-center py-3 px-4 rounded-lg font-bold text-lg shadow-md">
+                  {t('badge.soldOut')}
+                </div>
+              )}
+
               <div className="flex justify-between items-start mb-4">
                 <h1 className="text-3xl font-bold text-gray-900">{item.name}</h1>
-                <span className="text-3xl font-bold text-green-600">${item.price}</span>
+                <span className={`text-3xl font-bold ${item.soldOut ? 'text-gray-400 line-through' : 'text-green-600'}`}>
+                  ${item.price}
+                </span>
               </div>
 
               <div className={`flex gap-4 mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
@@ -194,36 +205,57 @@ export default function ItemPage() {
               )}
 
               <div className="space-y-4">
-                <a
-                  href={`https://wa.me/905368968229?text=${encodeURIComponent(
-                    `${t('whatsapp.interestedInItem')} ${item.name} ${t('whatsapp.listedFor')} $${item.price}.\n\n${t('whatsapp.itemLink')} ${window.location.href}\n\n${t('whatsapp.stillAvailable')}`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  <span>💬</span>
-                  {t('item.contactWhatsApp')}
-                </a>
+                {item.soldOut ? (
+                  <div className="text-center py-4">
+                    <p className="text-gray-600 text-lg mb-4">
+                      This item has been sold and is no longer available for purchase.
+                    </p>
+                    <a
+                      href={`https://wa.me/905368968229?text=${encodeURIComponent(
+                        `Hi! I was interested in the ${item.name} but I see it's sold out. Do you have any similar items available?`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      <span>💬</span>
+                      Ask About Similar Items
+                    </a>
+                  </div>
+                ) : (
+                  <>
+                    <a
+                      href={`https://wa.me/905368968229?text=${encodeURIComponent(
+                        `${t('whatsapp.interestedInItem')} ${item.name} ${t('whatsapp.listedFor')} $${item.price}.\n\n${t('whatsapp.itemLink')} ${window.location.href}\n\n${t('whatsapp.stillAvailable')}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      <span>💬</span>
+                      {t('item.contactWhatsApp')}
+                    </a>
 
-                <button
-                  onClick={() => setShowOfferModal(true)}
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  <span>💰</span>
-                  {t('item.makeOffer')}
-                </button>
+                    <button
+                      onClick={() => setShowOfferModal(true)}
+                      className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      <span>💰</span>
+                      {t('item.makeOffer')}
+                    </button>
 
-                <button
-                  onClick={handleCartAction}
-                  className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 ${itemInCart
-                    ? 'bg-red-600 hover:bg-red-700 text-white'
-                    : 'bg-blue-600 hover:bg-blue-700 text-white'
-                    }`}
-                >
-                  <span>{itemInCart ? '🗑️' : '🛒'}</span>
-                  {itemInCart ? t('item.removeFromCart') : t('item.addToCart')}
-                </button>
+                    <button
+                      onClick={handleCartAction}
+                      className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 ${itemInCart
+                        ? 'bg-red-600 hover:bg-red-700 text-white'
+                        : 'bg-blue-600 hover:bg-blue-700 text-white'
+                        }`}
+                    >
+                      <span>{itemInCart ? '🗑️' : '🛒'}</span>
+                      {itemInCart ? t('item.removeFromCart') : t('item.addToCart')}
+                    </button>
+                  </>
+                )}
               </div>
 
               <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">

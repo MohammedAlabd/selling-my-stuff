@@ -33,15 +33,15 @@ export default function ItemCard({ item }: ItemCardProps) {
   };
 
   return (
-    <Link href={item.soldOut ? '#' : `/item/${item.id}`} className={`group ${item.soldOut ? 'pointer-events-none' : ''}`}>
-      <div className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${item.soldOut ? 'opacity-60' : ''}`}>
+    <Link href={`/item/${item.id}`} className="group">
+      <div className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ${item.soldOut ? 'opacity-85' : ''}`}>
         <div className="relative h-64 bg-gray-200">
           {hasImages && firstImage ? (
             <Image
               src={firstImage}
               alt={item.name}
               fill
-              className="object-scale-down group-hover:scale-105 transition-transform duration-300"
+              className={`object-scale-down group-hover:scale-105 transition-transform duration-300 ${item.soldOut ? 'grayscale' : ''}`}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             />
           ) : (
@@ -62,10 +62,8 @@ export default function ItemCard({ item }: ItemCardProps) {
 
           {/* Sold Out Overlay */}
           {item.soldOut && (
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div className="bg-red-600 text-white text-lg font-bold px-4 py-2 rounded-lg shadow-lg">
-                {t('badge.soldOut')}
-              </div>
+            <div className="absolute top-0 left-0 right-0 bg-red-600 bg-opacity-90 text-white text-sm font-bold px-3 py-2 text-center shadow-md">
+              {t('badge.soldOut')}
             </div>
           )}
         </div>
