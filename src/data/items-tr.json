@@ -1,0 +1,484 @@
+[
+    {
+        "id": 6,
+        "asGoodAsNew": true,
+        "soldOut": false,
+        "name": "Xiaomi Mi Hava Temizleyici 4",
+        "description": "Mükemmel durumda Xiaomi Mi Hava Temizleyici 4. Gelişmiş filtrasyon sistemi ile temiz hava sağlar. Ev veya ofis kullanımı için mükemmel.",
+        "price": 75,
+        "condition": "excellent",
+        "category": "Aletler",
+        "assets": [
+            "https://cdn.dsmcdn.com/ty434/product/media/images/20220516/11/111973534/480324951/3/3_org_zoom.jpg",
+            "https://cdn.dsmcdn.com/ty432/product/media/images/20220516/11/111973534/480324951/1/1_org_zoom.jpg"
+        ],
+        "specifications": {
+            "url": "https://www.trendyol.com/xiaomi/mi-air-purifier-4-akilli-hava-temizleyici-beyaz-p-301588538?boutiqueId=614666&merchantId=968",
+            "note": "Sıfır aldım, bir yıldan fazla kullandım ama mükemmel durumda. HEPA filtresi var ve çok sessiz."
+        }
+    },
+    {
+        "id": 7,
+        "asGoodAsNew": true,
+        "soldOut": false,
+        "name": "Ahşap Elbise Askılığı",
+        "description": "Mükemmel durumda ahşap elbise askılığı. Kıyafetleri düzenlemek için mükemmel. Küçük odalar ve airbnb'ler için iyi.",
+        "price": 5,
+        "condition": "excellent",
+        "category": "Aletler",
+        "assets": [
+            "https://cdn.dsmcdn.com/ty1530/product/media/images/prod/QC/20240909/16/8cd1df41-e8b1-3eb7-96cf-4e162ed36972/1_org_zoom.jpg",
+            "https://cdn.dsmcdn.com/ty1534/product/media/images/prod/QC/20240909/16/9dff1a96-0ab3-3690-8a76-8fc8a9f6a6d7/1_org_zoom.jpg"
+        ],
+        "specifications": {
+            "url": "https://www.trendyol.com/wood-bazaar/konfeksiyon-elbise-askilik-iki-rafli-148-x-106-cm-p-201951281?boutiqueId=616759&merchantId=642665",
+            "note": "Küçük odalar ve airbnb'ler için iyi"
+        }
+    },
+    {
+        "id": 8,
+        "asGoodAsNew": true,
+        "soldOut": false,
+        "name": "BOSCH easy impact 600 Matkap",
+        "description": "Güvenilir Bosch darbeli matkap, DIY projeleri ve profesyonel kullanım için mükemmel. Çeşitli delme ve vidalama işleri için iyi performanslı kompakt tasarım.",
+        "price": 20,
+        "condition": "excellent",
+        "category": "Aletler",
+        "assets": [
+            "/assets/drill0.jpeg",
+            "/assets/drill1.jpeg"
+        ],
+        "specifications": {
+            "brand": "Bosch",
+            "model": "EasyImpact 600",
+            "url": "https://www.bosch-diy.com/za/en/p/easyimpact-600-0603133000",
+            "note": "Sadece birkaç saat kullanıldı, farklı matkap uçları ve tornavida uçları var. Mükemmel durumda."
+        }
+    },
+    {
+        "id": 9,
+        "soldOut": false,
+        "name": "Simfer 4552 Fırın 45L",
+        "description": "Yoğurt yapma fonksiyonu, cam kapı ve turbo fonksiyonu olan 45L mini fırın. Küçük mutfaklar veya ikinci fırın olarak mükemmel.",
+        "price": 30,
+        "condition": "Good",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/oven0.jpeg"
+        ],
+        "specifications": {
+            "brand": "Simfer",
+            "model": "4552",
+            "capacity": "45L",
+            "features": "Yoğurt yapma fonksiyonu, cam kapı, turbo",
+            "url": "https://www.hepsiburada.com/simfer-4552-yogurt-yapma-fonksiyonlu-camli-kapak-turbo-beyaz-45-lt-midi-firin-p-HBV00000458OS",
+            "note": "Sıfır aldım, birkaç yıl kullandım ama hâlâ iyi durumda."
+        }
+    },
+    {
+        "id": 10,
+        "soldOut": false,
+        "name": "Simfer 3010 D Ocak",
+        "description": "Simfer'den güvenilir gaz ocağı, yemek pişirme ihtiyaçları için mükemmel. İyi durumda ve hemen kullanıma hazır.",
+        "price": 50,
+        "condition": "Good",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/Stove0.jpeg",
+            "/assets/Stove1.jpeg",
+            "/assets/Stove2.jpeg",
+            "/assets/Stove3.jpeg"
+        ],
+        "specifications": {
+            "brand": "Simfer",
+            "model": "3010 D",
+            "url": "https://www.hepsiburada.com/simfer-3010-d-ocak-pm-mt53005",
+            "note": "Sıfır aldım, birkaç yıl kullandım ama hâlâ iyi durumda."
+        }
+    },
+    {
+        "id": 11,
+        "name": "Kahve Masası + TV Masası",
+        "description": "Oturma odası düzeni için mükemmel kahve masası ve TV masası seti. Mükemmel durumda ve kullanıma hazır.",
+        "price": 50,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/table1.jpeg",
+            "/assets/table2.jpeg",
+            "/assets/table3.jpeg",
+            "/assets/table4.jpeg",
+            "/assets/table8.jpeg",
+            "/assets/table9.jpeg"
+        ],
+        "specifications": {
+            "type": "Kahve masası ve TV masası seti",
+            "note": "Çok iyi durumda, fiyat pazarlık edilebilir"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Axen 55' TV",
+        "description": "Mükemmel durumda 55 inç Axen televizyon. Harika görüntü kalitesi ve ev eğlencesi için mükemmel.",
+        "price": 50,
+        "condition": "Good",
+        "category": "Elektronik",
+        "assets": [
+            "/assets/tv.jpeg",
+            "/assets/tv1.jpeg",
+            "/assets/tv2.jpeg",
+            "/assets/tv00.jpeg"
+        ],
+        "specifications": {
+            "brand": "Axen",
+            "size": "55 inç",
+            "note": "3 HDMI, iyi durumda 2K TV"
+        }
+    },
+    {
+        "id": 13,
+        "name": "L Şekilli Kanepe",
+        "description": "Mükemmel durumda rahat L şekilli köşe kanepe. Oturma odası oturma ve dinlenme için mükemmel.",
+        "price": 100,
+        "condition": "Good",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/couch0.jpeg",
+            "/assets/couch1.jpeg",
+            "/assets/couch2.jpeg",
+            "/assets/couch4.jpeg",
+            "/assets/couch5.jpeg"
+        ],
+        "specifications": {
+            "type": "L şekilli köşe kanepe",
+            "note": "İyi durumda"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Yatak Odası Dolabı ve Aksesuarları",
+        "description": "Depolama organizasyonu için çeşitli aksesuarları olan yatak odası dolabı. İşlevsel ve kullanıma hazır.",
+        "price": 50,
+        "condition": "OK",
+        "category": "Mobilya",
+        "assets": [],
+        "specifications": {
+            "type": "Yatak odası depolama çözümü",
+            "note": "İkinci el aldım, hâlâ işlevsel ama mükemmel durumda değil, başka bir şey alırsanız bedava verebilirim"
+        }
+    },
+    {
+        "id": 16,
+        "asGoodAsNew": true,
+        "name": "Bulaşık Makinesi Vestel Bm 4202 Wifi 4 Programlı",
+        "description": "WiFi bağlantısı ve 4 farklı yıkama programı olan modern Vestel bulaşık makinesi. Mükemmel durumda ve enerji verimli.",
+        "price": 200,
+        "condition": "Excellent",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/DW0.jpeg",
+            "/assets/DW2.jpeg",
+            "/assets/DW3.jpeg",
+            "/assets/DW22.jpeg"
+        ],
+        "specifications": {
+            "brand": "Vestel",
+            "model": "BM 4202",
+            "features": "WiFi, 4 program",
+            "url": "https://www.pttavm.com/vestel-bm-4202-wifi-4-programli-bulasik-makinesi-p-968824896",
+            "note": "Sıfır aldım, birkaç yıl kullandım ama mükemmel durumda. WiFi bağlantısı ve 4 farklı yıkama programı var."
+        }
+    },
+    {
+        "id": 17,
+        "asGoodAsNew": true,
+        "name": "Buzdolabı Vestel NF45011 402 Lt No-Frost",
+        "description": "Vestel'den büyük 402L No-Frost buzdolabı. Enerji verimli tasarım ve geniş iç hacim ile mükemmel durumda.",
+        "price": 300,
+        "condition": "Excellent",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/fridge0.jpeg",
+            "/assets/fridge1.jpeg",
+            "/assets/fridge2.jpeg",
+            "/assets/fridge3.jpeg",
+            "/assets/fridge11.jpeg",
+            "/assets/fridge12.jpeg",
+            "/assets/fridge13.jpeg",
+            "/assets/Fridge00.jpeg"
+        ],
+        "specifications": {
+            "brand": "Vestel",
+            "model": "NF45011",
+            "capacity": "402 Lt",
+            "type": "No-Frost",
+            "url": "https://www.hepsiburada.com/vestel-nf45011-g-402-lt-no-frost-buzdolabi-p-HBCV000064H60P",
+            "note": "Sıfır aldım, bir yıldan fazla kullandım ama mükemmel durumda. WiFi bağlantısı ve 4 farklı yıkama programı var."
+        }
+    },
+    {
+        "id": 18,
+        "name": "Su Isıtıcı",
+        "description": "Mükemmel durumda elektrikli su ısıtıcı. Hızlı ısıtma ve günlük kullanım için güvenilir.",
+        "price": 20,
+        "condition": "OK",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/WB0.jpeg",
+            "/assets/WB1.jpeg"
+        ],
+        "specifications": {
+            "type": "Elektrikli su ısıtıcı",
+            "note": "Temiz ve çok iyi çalışıyor, iki modu var, biri su kaynatmak için, diğeri suyu sıcak tutmak için"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Elektrikli Süpürge Philips",
+        "description": "Philips PowerPro Compact torbasız elektrikli süpürge. İyi emme gücü ve kolay depolama için kompakt tasarım.",
+        "price": 100,
+        "condition": "Good",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/VC00.jpeg",
+            "/assets/vc1.jpeg",
+            "/assets/vc2.jpeg"
+        ],
+        "specifications": {
+            "brand": "Philips",
+            "model": "PowerPro Compact FC9323",
+            "type": "Torbasız",
+            "url": "https://www.hepsiburada.com/philips-powerpro-compact-fc9323-07-toz-torbasiz-elektrikli-supurge-p-EVPHFC9323",
+            "note": "İyi ve güçlü elektrikli süpürge, sıfır aldım, birkaç yıl kullandım ama iyi durumda."
+        }
+    },
+    {
+        "id": 20,
+        "name": "Vantilatör",
+        "description": "İyi durumda elektrikli vantilatör. Sıcak havalarda serinlemek için iyi hava akımı sağlar.",
+        "price": 10,
+        "condition": "Good",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/fan-0.jpeg"
+        ],
+        "specifications": {
+            "type": "Elektrikli vantilatör",
+            "note": "İyi durumda, iyi çalışıyor"
+        }
+    },
+    {
+        "id": 21,
+        "asGoodAsNew": true,
+        "name": "Hava Soğutucu",
+        "description": "Mükemmel durumda Arçelik hava soğutucu. Sıcak hava için enerji verimli soğutma çözümü.",
+        "price": 50,
+        "condition": "Excellent",
+        "category": "Ev Aletleri",
+        "assets": [
+            "/assets/air-cooler-0.jpeg",
+            "/assets/air-cooler-1.jpeg",
+            "/assets/air-cooler-2.jpeg"
+        ],
+        "specifications": {
+            "brand": "Arçelik",
+            "model": "AC 6030",
+            "type": "Hava soğutucu",
+            "url": "https://www.trendyol.com/arcelik/ac-6030-havadar-hava-serinletici-p-43323488",
+            "note": "Sıfır aldım, sadece iki yaz kullandım ve çok az kullanım"
+        }
+    },
+    {
+        "id": 22,
+        "name": "Halılar",
+        "description": "Orta durumda halı koleksiyonu. Farklı odalar için çeşitli boyutlar mevcuttur.",
+        "price": 0,
+        "condition": "OK",
+        "category": "Ev Dekorasyonu",
+        "assets": [],
+        "specifications": {
+            "type": "Halı koleksiyonu",
+            "note": "Biri beyaz, diğeri renkli, çoğunlukla kırmızı, ihtiyacınız varsa bedava verebilirim"
+        }
+    },
+    {
+        "id": 23,
+        "name": "Ofis Masası",
+        "description": "Mükemmel durumda ofis masası. Ev ofisi veya çalışma alanı düzeni için mükemmel.",
+        "price": 30,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/office-desk-0.jpeg",
+            "/assets/office-desk-1.jpeg",
+            "https://cdn.dsmcdn.com/ty1390/product/media/images/prod/QC/20240628/14/c41681e3-899f-364a-a549-6b106afb3a4f/1_org_zoom.jpg",
+            "https://cdn.dsmcdn.com/ty1387/product/media/images/prod/QC/20240628/14/37dc59ba-682d-3205-ac1b-e13c8bb78245/1_org_zoom.jpg"
+        ],
+        "specifications": {
+            "type": "Ofis masası",
+            "url": "https://www.trendyol.com/bofigo/60x120-cm-2-rafli-calisma-masasi-bilgisayar-masasi-ofis-ders-yemek-masasi-beyaz-p-34259746?boutiqueId=616384&merchantId=114166",
+            "note": "Mükemmel durumda, ev ofisi veya çalışma alanı düzeni için mükemmel"
+        }
+    },
+    {
+        "id": 24,
+        "name": "Çalışma Monitörü",
+        "description": "FreeSync teknolojili Samsung 24 inç Full HD IPS LED monitör. Mükemmel durumda ve çalışma veya oyun için mükemmel.",
+        "price": 50,
+        "condition": "Excellent",
+        "category": "Elektronik",
+        "assets": [
+            "/assets/monitor-0.jpeg",
+            "/assets/monitor-1.jpeg",
+            "/assets/monitor-2.jpeg",
+            "/assets/monitor-3.jpeg"
+        ],
+        "specifications": {
+            "brand": "Samsung",
+            "model": "LF24T450FQR",
+            "size": "24 inç",
+            "resolution": "Full HD",
+            "features": "IPS, FreeSync, 75Hz",
+            "url": "https://www.hepsiburada.com/samsung-lf24t450fqrxuf-24-75hz-5ms-hdmi-display-freesync-full-hd-ips-led-monitor-pm-HBC000007NLO0",
+            "note": "Mükemmel durumda, ev ofisi veya çalışma alanı düzeni için mükemmel"
+        }
+    },
+    {
+        "id": 50,
+        "asGoodAsNew": true,
+        "name": "Raf 1",
+        "description": "Herhangi bir odada depolama ve organizasyon için mükemmel, mükemmel durumda 5 katlı raf",
+        "price": 10,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/room-shelf-0.jpeg",
+            "/assets/room-shelf-1.jpeg"
+        ],
+        "specifications": {
+            "note": "5 katlı raf"
+        }
+    },
+    {
+        "id": 51,
+        "name": "Raf 2",
+        "description": "Mutfak veya odada depolama ve organizasyon için mükemmel, uzatma ağı olan 3 katlı",
+        "price": 10,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/Kitchen-shelf-0.jpeg"
+        ],
+        "specifications": {
+            "note": "mutfak rafı"
+        }
+    },
+    {
+        "id": 52,
+        "asGoodAsNew": true,
+        "name": "Raf 3",
+        "description": "Banyoda çamaşır makinesi üzerinde depolama ve organizasyon için mükemmel, 4 katlı raf",
+        "price": 10,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "https://cdn.dsmcdn.com/ty582/product/media/images/20221031/14/204213311/610298290/1/1_org_zoom.jpg",
+            "https://cdn.dsmcdn.com/ty584/product/media/images/20221031/14/204213311/610298290/3/3_org_zoom.jpg",
+            "https://cdn.dsmcdn.com/ty582/product/media/images/20221031/14/204213311/610298290/5/5_org_zoom.jpg"
+        ],
+        "specifications": {
+            "note": "banyo rafı",
+            "url": "https://www.trendyol.com/pd/tedarikcenter/camasir-makinesi-ustu-3-rafli-duzenleyici-3-katli-cok-amacli-metal-banyo-dolabi-p-377434404?boutiqueId=61&merchantId=183815"
+        }
+    },
+    {
+        "id": 53,
+        "name": "Raf 4",
+        "description": "Ayakkabılar için depolama ve organizasyon için mükemmel, mükemmel durumda 6 katlı küçük raf",
+        "price": 10,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "https://cdn.dsmcdn.com/ty1149/product/media/images/prod/SPM/PIM/20240128/15/4a6034b7-28be-38a6-a2fd-62eeb5fafcb7/1_org_zoom.jpg",
+            "https://cdn.dsmcdn.com/ty1150/product/media/images/prod/SPM/PIM/20240128/15/5f025fbf-3cb5-3dac-ae78-2daac56e7d18/1_org_zoom.jpg"
+        ],
+        "specifications": {
+            "note": "6 katlı raf",
+            "url": "https://www.trendyol.com/mudesa/6-rafli-ayakkabilik-metal-ahsap-cok-amacli-raf-ayakkabi-dolabi-p-84043164?boutiqueId=594574&merchantId=226306"
+        }
+    },
+    {
+        "id": 26,
+        "asGoodAsNew": true,
+        "name": "Klavye Org + Standı",
+        "description": "Piyano tarzı hassasiyet ve dahil edilen stand ile Casio CT-X700C2 61 tuşlu elektronik klavye. Müzik öğrenme ve pratik için mükemmel.",
+        "price": 120,
+        "condition": "Excellent",
+        "category": "Müzik Aletleri",
+        "assets": [
+            "/assets/org0.jpeg",
+            "/assets/org1.jpeg",
+            "/assets/org3.jpeg",
+            "/assets/ogr2.jpeg"
+        ],
+        "specifications": {
+            "brand": "Casio",
+            "model": "CT-X700C2",
+            "keys": "61",
+            "features": "Piyano tarzı hassasiyet, adaptör dahil",
+            "url": "https://www.zuhalmuzik.com/casio-ct-x700c2-61-tus-piyano-stili-hassasiyetli-standart-org-adaptor-dahil-ct-x700c2",
+            "note": "Sıfır aldım, 10 saatten az kullandım, mükemmel durumda. Piyano tarzı hassasiyete sahip 61 tuşu var, stand ve adaptör ile birlikte geliyor."
+        }
+    },
+    {
+        "id": 27,
+        "name": "Ofis Koltuğu",
+        "description": "Dosya sırtlık desteği olan Techno Rest ergonomik ofis koltuğu. Uzun çalışma saatleri için rahat ve ayarlanabilir.",
+        "price": 80,
+        "condition": "Excellent",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/office-chair-0.jpeg",
+            "/assets/office-chair-2.jpeg",
+            "/assets/office-chair-3.jpeg",
+            "/assets/office-chair-4.jpeg"
+        ],
+        "specifications": {
+            "brand": "Techno Rest",
+            "type": "Ergonomik ofis koltuğu",
+            "features": "Dosya sırtlık desteği",
+            "dimensions": "65x110-120x67 cm",
+            "url": "https://www.adoremobilya.com/techno-rest-file-sirtli-calisma-koltugu-bej-gri-65x110-120x67-cm-gxyxd-3986",
+            "note": "Sıfır aldım, bir yıl kullandım ama hâlâ mükemmel durumda."
+        }
+    },
+    {
+        "id": 29,
+        "name": "Yemek Masası",
+        "description": "4 sandalyeli yemek masası.",
+        "price": 10,
+        "condition": "OK",
+        "category": "Mobilya",
+        "assets": [
+            "/assets/food-table-0.jpeg",
+            "/assets/food-table-1.jpeg"
+        ],
+        "specifications": {
+            "type": "Yemek masası",
+            "note": "Masa iyi durumda, ancak sandalyeler değil, 2 tanesi kırık."
+        }
+    },
+    {
+        "id": 14,
+        "name": "Fotoğraf Çerçeveleri",
+        "description": "İyi durumda fotoğraf çerçevesi koleksiyonu. Favori anılarınızı sergilemek için mükemmel.",
+        "price": 0,
+        "condition": "Good",
+        "category": "Ev Dekorasyonu",
+        "assets": [],
+        "specifications": {
+            "type": "Fotoğraf çerçevesi koleksiyonu",
+            "note": "online mağaza veya ikinci el dükkan"
+        }
+    }
+]

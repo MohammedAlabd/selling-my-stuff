@@ -22,7 +22,7 @@ interface ItemCardProps {
 }
 
 export default function ItemCard({ item }: ItemCardProps) {
-  const { t } = useTranslation();
+  const { t, translateCategory } = useTranslation();
   const hasImages = item.assets && item.assets.length > 0;
   const firstImage = hasImages ? item.assets[0] : null;
 
@@ -86,7 +86,7 @@ export default function ItemCard({ item }: ItemCardProps) {
 
           <div className="flex justify-between items-center">
             <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
-              {item.category}
+              {translateCategory(item.category)}
             </span>
             <span className="text-sm text-gray-500">
               {translateCondition(item.condition)}

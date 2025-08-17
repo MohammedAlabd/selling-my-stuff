@@ -1,0 +1,484 @@
+[
+  {
+    "id": 6,
+    "asGoodAsNew": true,
+    "soldOut": false,
+    "name": "جهاز تنقية الهواء شاومي مي 4",
+    "description": "جهاز تنقية الهواء شاومي مي 4 في حالة ممتازة. يوفر هواءً نظيفاً مع نظام ترشيح متقدم. مثالي للاستخدام المنزلي أو المكتبي.",
+    "price": 75,
+    "condition": "excellent",
+    "category": "أدوات",
+    "assets": [
+      "https://cdn.dsmcdn.com/ty434/product/media/images/20220516/11/111973534/480324951/3/3_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty432/product/media/images/20220516/11/111973534/480324951/1/1_org_zoom.jpg"
+    ],
+    "specifications": {
+      "url": "https://www.trendyol.com/xiaomi/mi-air-purifier-4-akilli-hava-temizleyici-beyaz-p-301588538?boutiqueId=614666&merchantId=968",
+      "note": "اشتريته جديداً، استخدمته لأكثر من عام لكنه في حالة ممتازة. يحتوي على فلتر HEPA وهو هادئ جداً."
+    }
+  },
+  {
+    "id": 7,
+    "asGoodAsNew": true,
+    "soldOut": false,
+    "name": "شماعة ملابس خشبية",
+    "description": "شماعة ملابس خشبية في حالة ممتازة. مثالية لتنظيم الملابس. جيدة للغرف الصغيرة والشقق المفروشة.",
+    "price": 5,
+    "condition": "excellent",
+    "category": "أدوات",
+    "assets": [
+      "https://cdn.dsmcdn.com/ty1530/product/media/images/prod/QC/20240909/16/8cd1df41-e8b1-3eb7-96cf-4e162ed36972/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1534/product/media/images/prod/QC/20240909/16/9dff1a96-0ab3-3690-8a76-8fc8a9f6a6d7/1_org_zoom.jpg"
+    ],
+    "specifications": {
+      "url": "https://www.trendyol.com/wood-bazaar/konfeksiyon-elbise-askilik-iki-rafli-148-x-106-cm-p-201951281?boutiqueId=616759&merchantId=642665",
+      "note": "جيدة للغرف الصغيرة والشقق المفروشة"
+    }
+  },
+  {
+    "id": 8,
+    "asGoodAsNew": true,
+    "soldOut": false,
+    "name": "مثقاب بوش إيزي إمباكت 600",
+    "description": "مثقاب طرقي موثوق من بوش، مثالي لمشاريع الأعمال اليدوية والاستخدام المهني. تصميم مدمج بأداء جيد لمختلف أعمال الحفر والبراغي.",
+    "price": 20,
+    "condition": "excellent",
+    "category": "أدوات",
+    "assets": [
+      "/assets/drill0.jpeg",
+      "/assets/drill1.jpeg"
+    ],
+    "specifications": {
+      "brand": "Bosch",
+      "model": "EasyImpact 600",
+      "url": "https://www.bosch-diy.com/za/en/p/easyimpact-600-0603133000",
+      "note": "استُخدم لبضع ساعات فقط، ويحتوي على رؤوس مثاقب وبراغي مختلفة. في حالة ممتازة."
+    }
+  },
+  {
+    "id": 9,
+    "soldOut": false,
+    "name": "فرن سيمفر 4552 سعة 45 لتر",
+    "description": "فرن صغير سعة 45 لتر مع وظيفة صنع الزبادي وباب زجاجي ووظيفة التوربو. مثالي للمطابخ الصغيرة أو كفرن ثانوي.",
+    "price": 30,
+    "condition": "Good",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/oven0.jpeg"
+    ],
+    "specifications": {
+      "brand": "Simfer",
+      "model": "4552",
+      "capacity": "45L",
+      "features": "وظيفة صنع الزبادي، باب زجاجي، توربو",
+      "url": "https://www.hepsiburada.com/simfer-4552-yogurt-yapma-fonksiyonlu-camli-kapak-turbo-beyaz-45-lt-midi-firin-p-HBV00000458OS",
+      "note": "اشتريته جديداً، استخدمته لبضع سنوات لكنه ما زال في حالة جيدة."
+    }
+  },
+  {
+    "id": 10,
+    "soldOut": false,
+    "name": "موقد سيمفر 3010 د",
+    "description": "موقد غاز موثوق من سيمفر، مثالي لاحتياجات الطبخ. في حالة جيدة وجاهز للاستخدام الفوري.",
+    "price": 50,
+    "condition": "Good",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/Stove0.jpeg",
+      "/assets/Stove1.jpeg",
+      "/assets/Stove2.jpeg",
+      "/assets/Stove3.jpeg"
+    ],
+    "specifications": {
+      "brand": "Simfer",
+      "model": "3010 D",
+      "url": "https://www.hepsiburada.com/simfer-3010-d-ocak-pm-mt53005",
+      "note": "اشتريته جديداً، استخدمته لبضع سنوات لكنه ما زال في حالة جيدة."
+    }
+  },
+  {
+    "id": 11,
+    "name": "طاولة قهوة + طاولة تلفزيون",
+    "description": "مجموعة طاولة قهوة وطاولة تلفزيون، مثالية لإعداد غرفة المعيشة. في حالة ممتازة وجاهزة للاستخدام.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "/assets/table1.jpeg",
+      "/assets/table2.jpeg",
+      "/assets/table3.jpeg",
+      "/assets/table4.jpeg",
+      "/assets/table8.jpeg",
+      "/assets/table9.jpeg"
+    ],
+    "specifications": {
+      "type": "مجموعة طاولة قهوة وطاولة تلفزيون",
+      "note": "في حالة جيدة جداً، السعر قابل للتفاوض"
+    }
+  },
+  {
+    "id": 12,
+    "name": "تلفزيون أكسن 55 بوصة",
+    "description": "تلفزيون أكسن 55 بوصة في حالة ممتازة. جودة صورة رائعة ومثالي للترفيه المنزلي.",
+    "price": 50,
+    "condition": "Good",
+    "category": "إلكترونيات",
+    "assets": [
+      "/assets/tv.jpeg",
+      "/assets/tv1.jpeg",
+      "/assets/tv2.jpeg",
+      "/assets/tv00.jpeg"
+    ],
+    "specifications": {
+      "brand": "Axen",
+      "size": "55 بوصة",
+      "note": "3 منافذ HDMI، تلفزيون 2K في حالة جيدة"
+    }
+  },
+  {
+    "id": 13,
+    "name": "أريكة على شكل حرف L",
+    "description": "أريكة مريحة على شكل حرف L في حالة ممتازة. مثالية للجلوس والاسترخاء في غرفة المعيشة.",
+    "price": 100,
+    "condition": "Good",
+    "category": "أثاث",
+    "assets": [
+      "/assets/couch0.jpeg",
+      "/assets/couch1.jpeg",
+      "/assets/couch2.jpeg",
+      "/assets/couch4.jpeg",
+      "/assets/couch5.jpeg"
+    ],
+    "specifications": {
+      "type": "أريكة ركنية على شكل حرف L",
+      "note": "في حالة جيدة"
+    }
+  },
+  {
+    "id": 15,
+    "name": "خزانة غرفة نوم وملحقاتها",
+    "description": "خزانة غرفة نوم مع ملحقات متنوعة لتنظيم التخزين. عملية وجاهزة للاستخدام.",
+    "price": 50,
+    "condition": "OK",
+    "category": "أثاث",
+    "assets": [],
+    "specifications": {
+      "type": "حل تخزين غرفة النوم",
+      "note": "اشتريتها مستعملة، ما زالت عملية لكن ليست في حالة مثالية، يمكنني إعطاؤها مجاناً إذا اشتريت شيئاً آخر"
+    }
+  },
+  {
+    "id": 16,
+    "asGoodAsNew": true,
+    "name": "غسالة أطباق فيستيل BM 4202 واي فاي 4 برامج",
+    "description": "غسالة أطباق فيستيل حديثة مع اتصال واي فاي و4 برامج غسيل مختلفة. في حالة ممتازة وموفرة للطاقة.",
+    "price": 200,
+    "condition": "Excellent",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/DW0.jpeg",
+      "/assets/DW2.jpeg",
+      "/assets/DW3.jpeg",
+      "/assets/DW22.jpeg"
+    ],
+    "specifications": {
+      "brand": "Vestel",
+      "model": "BM 4202",
+      "features": "واي فاي، 4 برامج",
+      "url": "https://www.pttavm.com/vestel-bm-4202-wifi-4-programli-bulasik-makinesi-p-968824896",
+      "note": "اشتريتها جديدة، استخدمتها لبضع سنوات لكنها في حالة ممتازة. لديها اتصال واي فاي و4 برامج غسيل مختلفة."
+    }
+  },
+  {
+    "id": 17,
+    "asGoodAsNew": true,
+    "name": "ثلاجة فيستيل NF45011 سعة 402 لتر بدون صقيع",
+    "description": "ثلاجة كبيرة سعة 402 لتر بدون صقيع من فيستيل. في حالة ممتازة مع تصميم موفر للطاقة ومساحة داخلية واسعة.",
+    "price": 300,
+    "condition": "Excellent",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/fridge0.jpeg",
+      "/assets/fridge1.jpeg",
+      "/assets/fridge2.jpeg",
+      "/assets/fridge3.jpeg",
+      "/assets/fridge11.jpeg",
+      "/assets/fridge12.jpeg",
+      "/assets/fridge13.jpeg",
+      "/assets/Fridge00.jpeg"
+    ],
+    "specifications": {
+      "brand": "Vestel",
+      "model": "NF45011",
+      "capacity": "402 لتر",
+      "type": "بدون صقيع",
+      "url": "https://www.hepsiburada.com/vestel-nf45011-g-402-lt-no-frost-buzdolabi-p-HBCV000064H60P",
+      "note": "اشتريتها جديدة، استخدمتها لأكثر من عام لكنها في حالة ممتازة. لديها اتصال واي فاي و4 برامج غسيل مختلفة."
+    }
+  },
+  {
+    "id": 18,
+    "name": "غلاية ماء",
+    "description": "غلاية ماء كهربائية في حالة ممتازة. تسخين سريع وموثوقة للاستخدام اليومي.",
+    "price": 20,
+    "condition": "OK",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/WB0.jpeg",
+      "/assets/WB1.jpeg"
+    ],
+    "specifications": {
+      "type": "غلاية ماء كهربائية",
+      "note": "نظيفة وتعمل بشكل جيد جداً، لديها وضعان، أحدهما لغلي الماء والآخر للحفاظ على الماء دافئاً"
+    }
+  },
+  {
+    "id": 19,
+    "name": "مكنسة كهربائية فيليبس",
+    "description": "مكنسة كهربائية فيليبس باور برو كومباكت بدون كيس. قوة شفط جيدة وتصميم مدمج للتخزين السهل.",
+    "price": 100,
+    "condition": "Good",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/VC00.jpeg",
+      "/assets/vc1.jpeg",
+      "/assets/vc2.jpeg"
+    ],
+    "specifications": {
+      "brand": "Philips",
+      "model": "PowerPro Compact FC9323",
+      "type": "بدون كيس",
+      "url": "https://www.hepsiburada.com/philips-powerpro-compact-fc9323-07-toz-torbasiz-elektrikli-supurge-p-EVPHFC9323",
+      "note": "مكنسة كهربائية جيدة وقوية، اشتريتها جديدة، استخدمتها لبضع سنوات لكنها في حالة جيدة."
+    }
+  },
+  {
+    "id": 20,
+    "name": "مروحة",
+    "description": "مروحة كهربائية في حالة جيدة. توفر تدفق هواء جيد للتبريد خلال الطقس الدافئ.",
+    "price": 10,
+    "condition": "Good",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/fan-0.jpeg"
+    ],
+    "specifications": {
+      "type": "مروحة كهربائية",
+      "note": "في حالة جيدة، تعمل بشكل جيد"
+    }
+  },
+  {
+    "id": 21,
+    "asGoodAsNew": true,
+    "name": "مبرد هواء",
+    "description": "مبرد هواء أرتشيليك في حالة ممتازة. حل تبريد موفر للطاقة للطقس الحار.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "أجهزة منزلية",
+    "assets": [
+      "/assets/air-cooler-0.jpeg",
+      "/assets/air-cooler-1.jpeg",
+      "/assets/air-cooler-2.jpeg"
+    ],
+    "specifications": {
+      "brand": "Arçelik",
+      "model": "AC 6030",
+      "type": "مبرد هواء",
+      "url": "https://www.trendyol.com/arcelik/ac-6030-havadar-hava-serinletici-p-43323488",
+      "note": "اشتريته جديداً، استخدمته لصيفين فقط واستخدام قليل جداً"
+    }
+  },
+  {
+    "id": 22,
+    "name": "سجادات",
+    "description": "مجموعة سجاجيد في حالة مقبولة. أحجام مختلفة متاحة لغرف مختلفة.",
+    "price": 0,
+    "condition": "OK",
+    "category": "ديكور منزلي",
+    "assets": [],
+    "specifications": {
+      "type": "مجموعة سجاجيد",
+      "note": "واحدة بيضاء وأخرى ملونة، معظمها أحمر، مستعد لإعطائها مجاناً إذا كنت تحتاجها"
+    }
+  },
+  {
+    "id": 23,
+    "name": "مكتب مكتبي",
+    "description": "مكتب مكتبي في حالة ممتازة. مثالي لإعداد المكتب المنزلي أو مساحة الدراسة.",
+    "price": 30,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "/assets/office-desk-0.jpeg",
+      "/assets/office-desk-1.jpeg",
+      "https://cdn.dsmcdn.com/ty1390/product/media/images/prod/QC/20240628/14/c41681e3-899f-364a-a549-6b106afb3a4f/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1387/product/media/images/prod/QC/20240628/14/37dc59ba-682d-3205-ac1b-e13c8bb78245/1_org_zoom.jpg"
+    ],
+    "specifications": {
+      "type": "مكتب مكتبي",
+      "url": "https://www.trendyol.com/bofigo/60x120-cm-2-rafli-calisma-masasi-bilgisayar-masasi-ofis-ders-yemek-masasi-beyaz-p-34259746?boutiqueId=616384&merchantId=114166",
+      "note": "في حالة ممتازة، مثالي لإعداد المكتب المنزلي أو مساحة الدراسة"
+    }
+  },
+  {
+    "id": 24,
+    "name": "شاشة عمل",
+    "description": "شاشة سامسونج 24 بوصة Full HD IPS LED مع تقنية FreeSync. في حالة ممتازة ومثالية للعمل أو الألعاب.",
+    "price": 50,
+    "condition": "Excellent",
+    "category": "إلكترونيات",
+    "assets": [
+      "/assets/monitor-0.jpeg",
+      "/assets/monitor-1.jpeg",
+      "/assets/monitor-2.jpeg",
+      "/assets/monitor-3.jpeg"
+    ],
+    "specifications": {
+      "brand": "Samsung",
+      "model": "LF24T450FQR",
+      "size": "24 بوصة",
+      "resolution": "Full HD",
+      "features": "IPS، FreeSync، 75Hz",
+      "url": "https://www.hepsiburada.com/samsung-lf24t450fqrxuf-24-75hz-5ms-hdmi-display-freesync-full-hd-ips-led-monitor-pm-HBC000007NLO0",
+      "note": "في حالة ممتازة، مثالية لإعداد المكتب المنزلي أو مساحة الدراسة"
+    }
+  },
+  {
+    "id": 50,
+    "asGoodAsNew": true,
+    "name": "رف 1",
+    "description": "مثالي للتخزين والتنظيم في أي غرفة، رف 5 طوابق في حالة ممتازة",
+    "price": 10,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "/assets/room-shelf-0.jpeg",
+      "/assets/room-shelf-1.jpeg"
+    ],
+    "specifications": {
+      "note": "رف 5 طوابق"
+    }
+  },
+  {
+    "id": 51,
+    "name": "رف 2",
+    "description": "مثالي للتخزين والتنظيم في المطبخ أو الغرفة، 3 طوابق مع شبكة تمديد",
+    "price": 10,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "/assets/Kitchen-shelf-0.jpeg"
+    ],
+    "specifications": {
+      "note": "رف مطبخ"
+    }
+  },
+  {
+    "id": 52,
+    "asGoodAsNew": true,
+    "name": "رف 3",
+    "description": "مثالي للتخزين والتنظيم في الحمام فوق الغسالة، رف 4 طوابق",
+    "price": 10,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "https://cdn.dsmcdn.com/ty582/product/media/images/20221031/14/204213311/610298290/1/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty584/product/media/images/20221031/14/204213311/610298290/3/3_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty582/product/media/images/20221031/14/204213311/610298290/5/5_org_zoom.jpg"
+    ],
+    "specifications": {
+      "note": "رف حمام",
+      "url": "https://www.trendyol.com/pd/tedarikcenter/camasir-makinesi-ustu-3-rafli-duzenleyici-3-katli-cok-amacli-metal-banyo-dolabi-p-377434404?boutiqueId=61&merchantId=183815"
+    }
+  },
+  {
+    "id": 53,
+    "name": "رف 4",
+    "description": "مثالي للتخزين والتنظيم للأحذية، رف صغير 6 طوابق في حالة ممتازة",
+    "price": 10,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "https://cdn.dsmcdn.com/ty1149/product/media/images/prod/SPM/PIM/20240128/15/4a6034b7-28be-38a6-a2fd-62eeb5fafcb7/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty1150/product/media/images/prod/SPM/PIM/20240128/15/5f025fbf-3cb5-3dac-ae78-2daac56e7d18/1_org_zoom.jpg"
+    ],
+    "specifications": {
+      "note": "رف 6 طوابق",
+      "url": "https://www.trendyol.com/mudesa/6-rafli-ayakkabilik-metal-ahsap-cok-amacli-raf-ayakkabi-dolabi-p-84043164?boutiqueId=594574&merchantId=226306"
+    }
+  },
+  {
+    "id": 26,
+    "asGoodAsNew": true,
+    "name": "أورغ لوحة مفاتيح + حاملها",
+    "description": "لوحة مفاتيح إلكترونية كاسيو CT-X700C2 بـ 61 مفتاحاً مع حساسية نمط البيانو وحامل مدرج. مثالية لتعلم الموسيقى والممارسة.",
+    "price": 120,
+    "condition": "Excellent",
+    "category": "آلات موسيقية",
+    "assets": [
+      "/assets/org0.jpeg",
+      "/assets/org1.jpeg",
+      "/assets/org3.jpeg",
+      "/assets/ogr2.jpeg"
+    ],
+    "specifications": {
+      "brand": "Casio",
+      "model": "CT-X700C2",
+      "keys": "61",
+      "features": "حساسية نمط البيانو، محول مدرج",
+      "url": "https://www.zuhalmuzik.com/casio-ct-x700c2-61-tus-piyano-stili-hassasiyetli-standart-org-adaptor-dahil-ct-x700c2",
+      "note": "اشتريته جديداً، استخدمته لأقل من 10 ساعات، في حالة ممتازة. لديه 61 مفتاحاً مع حساسية نمط البيانو، ويأتي مع حامل ومحول."
+    }
+  },
+  {
+    "id": 27,
+    "name": "كرسي مكتب",
+    "description": "كرسي مكتب مريح من تكنو رست مع دعم ظهر ملف. مريح وقابل للتعديل لساعات العمل الطويلة.",
+    "price": 80,
+    "condition": "Excellent",
+    "category": "أثاث",
+    "assets": [
+      "/assets/office-chair-0.jpeg",
+      "/assets/office-chair-2.jpeg",
+      "/assets/office-chair-3.jpeg",
+      "/assets/office-chair-4.jpeg"
+    ],
+    "specifications": {
+      "brand": "Techno Rest",
+      "type": "كرسي مكتب مريح",
+      "features": "دعم ظهر ملف",
+      "dimensions": "65x110-120x67 سم",
+      "url": "https://www.adoremobilya.com/techno-rest-file-sirtli-calisma-koltugu-bej-gri-65x110-120x67-cm-gxyxd-3986",
+      "note": "اشتريته جديداً، استخدمته لسنة واحدة لكنه ما زال في حالة ممتازة."
+    }
+  },
+  {
+    "id": 29,
+    "name": "طاولة طعام",
+    "description": "طاولة طعام مع 4 كراسي.",
+    "price": 10,
+    "condition": "OK",
+    "category": "أثاث",
+    "assets": [
+      "/assets/food-table-0.jpeg",
+      "/assets/food-table-1.jpeg"
+    ],
+    "specifications": {
+      "type": "طاولة طعام",
+      "note": "الطاولة في حالة جيدة، لكن الكراسي ليست كذلك، 2 منها مكسورة."
+    }
+  },
+  {
+    "id": 14,
+    "name": "إطارات صور",
+    "description": "مجموعة إطارات صور في حالة جيدة. مثالية لعرض ذكرياتك المفضلة.",
+    "price": 0,
+    "condition": "Good",
+    "category": "ديكور منزلي",
+    "assets": [],
+    "specifications": {
+      "type": "مجموعة إطارات صور",
+      "note": "متجر إلكتروني أو متجر مستعمل"
+    }
+  }
+]

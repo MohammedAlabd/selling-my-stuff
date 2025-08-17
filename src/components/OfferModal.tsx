@@ -22,7 +22,7 @@ interface OfferModalProps {
 }
 
 export default function OfferModal({ item, isOpen, onClose, onSubmitOffer }: OfferModalProps) {
-  const { t, isRTL } = useTranslation();
+  const { t, isRTL, translateCategory } = useTranslation();
   const [offerPrice, setOfferPrice] = useState('');
   const [error, setError] = useState('');
 
@@ -75,7 +75,7 @@ export default function OfferModal({ item, isOpen, onClose, onSubmitOffer }: Off
 
         <div className="mb-4">
           <h3 className="font-semibold text-gray-900">{item.name}</h3>
-          <p className="text-sm text-gray-600">{translateCondition(item.condition)} • {item.category}</p>
+          <p className="text-sm text-gray-600">{translateCondition(item.condition)} • {translateCategory(item.category)}</p>
           <p className="text-lg font-bold text-green-600 mt-1">
             {t('offer.askingPrice')} ${item.price}
           </p>

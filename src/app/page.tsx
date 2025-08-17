@@ -5,7 +5,6 @@ import LanguageToggle from '@/components/LanguageToggle';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { useTranslation } from '@/context/I18nContext';
-import itemsData from '@/data/items.json';
 import { useState, useMemo } from 'react';
 
 interface Item {
@@ -25,9 +24,8 @@ type SortOption = 'name' | 'price-low' | 'price-high' | 'condition' | 'category'
 
 export default function Home() {
   const { getItemCount } = useCart();
-  const { t, isRTL } = useTranslation();
+  const { t, isRTL, items, loading } = useTranslation();
   const [sortBy, setSortBy] = useState<SortOption>('condition');
-  const items: Item[] = itemsData;
 
   const sortedItems = useMemo(() => {
     const sorted = [...items];
@@ -57,6 +55,17 @@ export default function Home() {
         return sorted;
     }
   }, [items, sortBy]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">

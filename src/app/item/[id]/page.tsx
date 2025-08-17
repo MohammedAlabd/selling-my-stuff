@@ -9,7 +9,6 @@ import { useCart } from '@/context/CartContext';
 import { useTranslation } from '@/context/I18nContext';
 import OfferModal from '@/components/OfferModal';
 import LanguageToggle from '@/components/LanguageToggle';
-import itemsData from '@/data/items.json';
 
 interface Item {
   id: number;
@@ -27,15 +26,26 @@ export default function ItemPage() {
   const params = useParams();
   const id = typeof params.id === 'string' ? params.id : '';
   const { addItem, removeItem, isInCart, getItemCount } = useCart();
-  const { t, isRTL } = useTranslation();
+  const { t, isRTL, items, loading, translateCategory } = useTranslation();
   const [showOfferModal, setShowOfferModal] = useState(false);
-  const item: Item | undefined = itemsData.find((item) => item.id === parseInt(id));
+  const item: Item | undefined = items.find((item) => item.id === parseInt(id));
 
   const translateCondition = (condition: string) => {
     const conditionKey = `condition.${condition.toLowerCase()}`;
     const translation = t(conditionKey);
     return translation === conditionKey ? condition : translation;
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!item) {
     notFound();
@@ -67,7 +77,7 @@ export default function ItemPage() {
               href="/"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
             >
-              {isRTL ? '→' : '←'} {t('nav.backToItems')}
+              {t('nav.backToItems')}
             </Link>
             <div className="flex items-center gap-4">
               <LanguageToggle />
@@ -127,7 +137,7 @@ export default function ItemPage() {
 
               <div className={`flex gap-4 mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                  {item.category}
+                  {translateCategory(item.category)}
                 </span>
                 <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                   {translateCondition(item.condition)}

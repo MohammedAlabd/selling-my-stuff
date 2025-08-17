@@ -8,7 +8,7 @@ import LanguageToggle from '@/components/LanguageToggle';
 
 export default function CartPage() {
   const { cart, removeItem, clearCart, getTotalPrice } = useCart();
-  const { t, isRTL } = useTranslation();
+  const { t, isRTL, translateCategory } = useTranslation();
   const [showBulkOffer, setShowBulkOffer] = useState(false);
   const [bulkOfferPrice, setBulkOfferPrice] = useState('');
 
@@ -82,7 +82,7 @@ export default function CartPage() {
                 href="/"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
               >
-                {isRTL ? '→' : '←'} {t('nav.backToItems')}
+                {t('nav.backToItems')}
               </Link>
               <LanguageToggle />
             </div>
@@ -115,7 +115,7 @@ export default function CartPage() {
               href="/"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
             >
-              {isRTL ? '→' : '←'} {t('nav.backToItems')}
+              {t('nav.backToItems')}
             </Link>
             <LanguageToggle />
           </div>
@@ -146,7 +146,7 @@ export default function CartPage() {
                     </div>
                     <div className={isRTL ? 'text-right' : 'text-left'}>
                       <h3 className="font-semibold text-gray-900">{item.name}</h3>
-                      <p className="text-sm text-gray-600">{translateCondition(item.condition)} • {item.category}</p>
+                      <p className="text-sm text-gray-600">{translateCondition(item.condition)} • {translateCategory(item.category)}</p>
                       <p className="text-lg font-bold text-green-600">${item.price}</p>
                     </div>
                   </div>
