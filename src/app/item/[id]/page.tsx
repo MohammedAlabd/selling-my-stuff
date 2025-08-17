@@ -6,7 +6,9 @@ import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
+import { useTranslation } from '@/context/I18nContext';
 import OfferModal from '@/components/OfferModal';
+import LanguageToggle from '@/components/LanguageToggle';
 import itemsData from '@/data/items.json';
 
 interface Item {
@@ -25,8 +27,15 @@ export default function ItemPage() {
   const params = useParams();
   const id = typeof params.id === 'string' ? params.id : '';
   const { addItem, removeItem, isInCart, getItemCount } = useCart();
+  const { t, isRTL } = useTranslation();
   const [showOfferModal, setShowOfferModal] = useState(false);
   const item: Item | undefined = itemsData.find((item) => item.id === parseInt(id));
+
+  const translateCondition = (condition: string) => {
+    const conditionKey = `condition.${condition.toLowerCase()}`;
+    const translation = t(conditionKey);
+    return translation === conditionKey ? condition : translation;
+  };
 
   if (!item) {
     notFound();
@@ -43,7 +52,7 @@ export default function ItemPage() {
   };
 
   const handleOfferSubmit = (offerPrice: number) => {
-    const message = `Hi! I'd like to make an offer on the ${item.name}.\n\nListed Price: $${item.price}\nMy Offer: $${offerPrice}\n\nItem Link: ${window.location.href}\n\nIs this offer acceptable? I'm ready to arrange pickup if you accept.`;
+    const message = `${t('whatsapp.itemOffer')} ${item.name}.\n\n${t('whatsapp.listedPrice')} $${item.price}\n${t('whatsapp.myOffer')} $${offerPrice}\n\n${t('whatsapp.itemLink')} ${window.location.href}\n\n${t('whatsapp.offerAcceptable')}`;
 
     const whatsappUrl = `https://wa.me/905368968229?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -53,25 +62,28 @@ export default function ItemPage() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
+          <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
             <Link
               href="/"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
             >
-              ← Back to all items
+              {isRTL ? '→' : '←'} {t('nav.backToItems')}
             </Link>
-            <Link
-              href="/cart"
-              className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
-            >
-              <span>🛒</span>
-              Cart
-              {getItemCount() > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {getItemCount()}
-                </span>
-              )}
-            </Link>
+            <div className="flex items-center gap-4">
+              <LanguageToggle />
+              <Link
+                href="/cart"
+                className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center gap-2"
+              >
+                <span>🛒</span>
+                {t('nav.cart')}
+                {getItemCount() > 0 && (
+                  <span className={`absolute -top-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center ${isRTL ? '-left-2' : '-right-2'}`}>
+                    {getItemCount()}
+                  </span>
+                )}
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -113,23 +125,23 @@ export default function ItemPage() {
                 <span className="text-3xl font-bold text-green-600">${item.price}</span>
               </div>
 
-              <div className="flex gap-4 mb-6">
+              <div className={`flex gap-4 mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                   {item.category}
                 </span>
                 <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                  {item.condition}
+                  {translateCondition(item.condition)}
                 </span>
               </div>
 
               <div className="mb-8">
-                <h2 className="text-xl font-semibold text-gray-900 mb-3">Description</h2>
-                <p className="text-gray-700 leading-relaxed">{item.description}</p>
+                <h2 className={`text-xl font-semibold text-gray-900 mb-3 ${isRTL ? 'text-right' : 'text-left'}`}>{t('item.description')}</h2>
+                <p className={`text-gray-700 leading-relaxed ${isRTL ? 'text-right' : 'text-left'}`}>{item.description}</p>
               </div>
 
               {item.specifications && (
                 <div className="mb-8">
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Specifications</h2>
+                  <h2 className={`text-xl font-semibold text-gray-900 mb-3 ${isRTL ? 'text-right' : 'text-left'}`}>{t('item.specifications')}</h2>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <dl className="grid grid-cols-1 gap-3">
                       {Object.entries(item.specifications)
@@ -163,14 +175,14 @@ export default function ItemPage() {
               <div className="space-y-4">
                 <a
                   href={`https://wa.me/905368968229?text=${encodeURIComponent(
-                    `Hi! I'm interested in the ${item.name} listed for $${item.price}.\n\nItem Link: ${window.location.href}\n\nIs this item still available? When can I arrange pickup?`
+                    `${t('whatsapp.interestedInItem')} ${item.name} ${t('whatsapp.listedFor')} $${item.price}.\n\n${t('whatsapp.itemLink')} ${window.location.href}\n\n${t('whatsapp.stillAvailable')}`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <span>💬</span>
-                  Contact on WhatsApp
+                  {t('item.contactWhatsApp')}
                 </a>
 
                 <button
@@ -178,7 +190,7 @@ export default function ItemPage() {
                   className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <span>💰</span>
-                  Make an Offer
+                  {t('item.makeOffer')}
                 </button>
 
                 <button
@@ -189,14 +201,14 @@ export default function ItemPage() {
                     }`}
                 >
                   <span>{itemInCart ? '🗑️' : '🛒'}</span>
-                  {itemInCart ? 'Remove from Cart' : 'Add to Cart'}
+                  {itemInCart ? t('item.removeFromCart') : t('item.addToCart')}
                 </button>
               </div>
 
               <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <h3 className="text-sm font-medium text-yellow-800 mb-1">Pickup Information</h3>
-                <p className="text-sm text-yellow-700">
-                  This item is available for pickup only. Please contact the seller to arrange a convenient time.
+                <h3 className={`text-sm font-medium text-yellow-800 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>{t('item.pickupInfo')}</h3>
+                <p className={`text-sm text-yellow-700 ${isRTL ? 'text-right' : 'text-left'}`}>
+                  {t('item.pickupDescription')}
                 </p>
               </div>
             </div>

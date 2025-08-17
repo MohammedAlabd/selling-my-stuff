@@ -1,8 +1,10 @@
 'use client';
 
 import ItemCard from '@/components/ItemCard';
+import LanguageToggle from '@/components/LanguageToggle';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
+import { useTranslation } from '@/context/I18nContext';
 import itemsData from '@/data/items.json';
 import { useState, useMemo } from 'react';
 
@@ -23,6 +25,7 @@ type SortOption = 'name' | 'price-low' | 'price-high' | 'condition' | 'category'
 
 export default function Home() {
   const { getItemCount } = useCart();
+  const { t, isRTL } = useTranslation();
   const [sortBy, setSortBy] = useState<SortOption>('condition');
   const items: Item[] = itemsData;
 
@@ -60,36 +63,39 @@ export default function Home() {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex justify-between items-start">
-            <div>
+            <div className={isRTL ? 'text-right' : 'text-left'}>
               <h1 className="text-3xl font-bold text-gray-900">
-                Moving Sale - Everything Must Go!
+                {t('header.title')}
               </h1>
               <p className="text-gray-600 mt-2">
-                Quality household items and furniture at great prices
+                {t('header.subtitle')}
               </p>
             </div>
-            <Link
-              href="/cart"
-              className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
-            >
-              <span>🛒</span>
-              Cart
-              {getItemCount() > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
-                  {getItemCount()}
-                </span>
-              )}
-            </Link>
+            <div className="flex items-center gap-4">
+              <LanguageToggle />
+              <Link
+                href="/cart"
+                className="relative bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
+              >
+                <span>🛒</span>
+                {t('nav.cart')}
+                {getItemCount() > 0 && (
+                  <span className={`absolute -top-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center ${isRTL ? '-left-2' : '-right-2'}`}>
+                    {getItemCount()}
+                  </span>
+                )}
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Sorting Controls */}
-        <div className="mb-6 flex justify-between items-center">
-          <div className="flex items-center gap-4">
+        <div className={`mb-6 flex justify-between items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <div className={`flex items-center gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <label htmlFor="sort-select" className="text-sm font-medium text-gray-700">
-              Sort by:
+              {t('sort.label')}
             </label>
             <select
               id="sort-select"
@@ -97,15 +103,15 @@ export default function Home() {
               onChange={(e) => setSortBy(e.target.value as SortOption)}
               className="border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
-              <option value="condition">Condition (Best First)</option>
-              <option value="name">Name (A-Z)</option>
-              <option value="price-low">Price (Low to High)</option>
-              <option value="price-high">Price (High to Low)</option>
-              <option value="category">Category</option>
+              <option value="condition">{t('sort.condition')}</option>
+              <option value="name">{t('sort.name')}</option>
+              <option value="price-low">{t('sort.priceLowHigh')}</option>
+              <option value="price-high">{t('sort.priceHighLow')}</option>
+              <option value="category">{t('sort.category')}</option>
             </select>
           </div>
           <div className="text-sm text-gray-500">
-            {sortedItems.length} items
+            {sortedItems.length} {t('items.count')}
           </div>
         </div>
 
@@ -119,7 +125,7 @@ export default function Home() {
       <footer className="bg-white border-t mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-gray-500 text-sm">
-            Contact me for pickup arrangements and additional questions
+            {t('footer.contact')}
           </p>
         </div>
       </footer>

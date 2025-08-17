@@ -31,3 +31,49 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .justify-between {
+  flex-direction: row-reverse;
+}
+
+/* Override specific flexbox items to maintain proper layout in RTL */
+[dir="rtl"] .flex-col {
+  flex-direction: column;
+}
+
+[dir="rtl"] .grid {
+  direction: ltr;
+}
+
+[dir="rtl"] .grid>* {
+  direction: rtl;
+}
+
+/* RTL-specific margins and paddings */
+[dir="rtl"] .ml-auto {
+  margin-left: unset;
+  margin-right: auto;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-right: unset;
+  margin-left: auto;
+}
+
+/* Fix button and link alignments in RTL */
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}

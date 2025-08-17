@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslation } from '@/context/I18nContext';
 
 interface Item {
   id: number;
@@ -21,8 +22,15 @@ interface ItemCardProps {
 }
 
 export default function ItemCard({ item }: ItemCardProps) {
+  const { t } = useTranslation();
   const hasImages = item.assets && item.assets.length > 0;
   const firstImage = hasImages ? item.assets[0] : null;
+
+  const translateCondition = (condition: string) => {
+    const conditionKey = `condition.${condition.toLowerCase()}`;
+    const translation = t(conditionKey);
+    return translation === conditionKey ? condition : translation;
+  };
 
   return (
     <Link href={item.soldOut ? '#' : `/item/${item.id}`} className={`group ${item.soldOut ? 'pointer-events-none' : ''}`}>
@@ -48,7 +56,7 @@ export default function ItemCard({ item }: ItemCardProps) {
           {/* As Good As New Badge */}
           {item.asGoodAsNew && (
             <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold shadow-md">
-              As Good As New
+              {t('badge.asGoodAsNew')}
             </div>
           )}
 
@@ -56,7 +64,7 @@ export default function ItemCard({ item }: ItemCardProps) {
           {item.soldOut && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <div className="bg-red-600 text-white text-lg font-bold px-4 py-2 rounded-lg shadow-lg">
-                SOLD OUT
+                {t('badge.soldOut')}
               </div>
             </div>
           )}
@@ -81,7 +89,7 @@ export default function ItemCard({ item }: ItemCardProps) {
               {item.category}
             </span>
             <span className="text-sm text-gray-500">
-              {item.condition}
+              {translateCondition(item.condition)}
             </span>
           </div>
         </div>

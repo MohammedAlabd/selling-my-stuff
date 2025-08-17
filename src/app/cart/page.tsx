@@ -3,24 +3,33 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
+import { useTranslation } from '@/context/I18nContext';
+import LanguageToggle from '@/components/LanguageToggle';
 
 export default function CartPage() {
   const { cart, removeItem, clearCart, getTotalPrice } = useCart();
+  const { t, isRTL } = useTranslation();
   const [showBulkOffer, setShowBulkOffer] = useState(false);
   const [bulkOfferPrice, setBulkOfferPrice] = useState('');
+
+  const translateCondition = (condition: string) => {
+    const conditionKey = `condition.${condition.toLowerCase()}`;
+    const translation = t(conditionKey);
+    return translation === conditionKey ? condition : translation;
+  };
 
   const generateWhatsAppMessage = () => {
     if (cart.items.length === 0) return '';
 
-    let message = 'Hi! I am interested in the following items from your moving sale:\n\n';
+    let message = `${t('whatsapp.interestedIn')}\n\n`;
 
     cart.items.forEach((item, index) => {
       message += `${index + 1}. ${item.name} - $${item.price}\n`;
       message += `   Link: ${window.location.origin}/item/${item.id}\n`;
     });
 
-    message += `Total: $${getTotalPrice()}\n\n`;
-    message += 'Are these items still available? When can I arrange pickup for all of them?';
+    message += `${t('whatsapp.total')} $${getTotalPrice()}\n\n`;
+    message += t('whatsapp.available');
 
     return encodeURIComponent(message);
   };
@@ -28,16 +37,16 @@ export default function CartPage() {
   const generateBulkOfferMessage = (offerPrice: number) => {
     if (cart.items.length === 0) return '';
 
-    let message = 'Hi! I would like to make a bulk offer on the following items from your moving sale:\n\n';
+    let message = `${t('whatsapp.bulkOffer')}\n\n`;
 
     cart.items.forEach((item, index) => {
-      message += `${index + 1}. ${item.name} - Listed: $${item.price}\n`;
+      message += `${index + 1}. ${item.name} - ${t('whatsapp.listed')} $${item.price}\n`;
       message += `   Link: ${window.location.origin}/item/${item.id}\n`;
     });
 
-    message += `Total Listed Price: $${getTotalPrice()}\n`;
-    message += `My Bulk Offer: $${offerPrice}\n\n`;
-    message += 'I am interested in purchasing all these items together. Is this bulk offer acceptable? I can arrange pickup for all items at once if you accept.';
+    message += `${t('whatsapp.totalListedPrice')} $${getTotalPrice()}\n`;
+    message += `${t('whatsapp.myBulkOffer')} $${offerPrice}\n\n`;
+    message += t('whatsapp.bulkOfferAcceptable');
 
     return encodeURIComponent(message);
   };
@@ -47,12 +56,12 @@ export default function CartPage() {
     const price = parseFloat(bulkOfferPrice);
 
     if (isNaN(price) || price <= 0) {
-      alert('Please enter a valid price');
+      alert(t('alert.validPrice'));
       return;
     }
 
     if (price >= getTotalPrice()) {
-      alert('Offer should be less than the total asking price');
+      alert(t('alert.offerLessThanTotal'));
       return;
     }
 
@@ -68,25 +77,28 @@ export default function CartPage() {
       <div className="min-h-screen bg-gray-50">
         <header className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link
-              href="/"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-            >
-              ← Back to all items
-            </Link>
+            <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+              <Link
+                href="/"
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+              >
+                {isRTL ? '→' : '←'} {t('nav.backToItems')}
+              </Link>
+              <LanguageToggle />
+            </div>
           </div>
         </header>
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center py-16">
             <div className="text-6xl mb-4">🛒</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Your cart is empty</h1>
-            <p className="text-gray-600 mb-8">Add some items to get started!</p>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('cart.empty.title')}</h1>
+            <p className="text-gray-600 mb-8">{t('cart.empty.subtitle')}</p>
             <Link
               href="/"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
             >
-              Browse Items
+              {t('cart.browseItems')}
             </Link>
           </div>
         </main>
@@ -98,50 +110,53 @@ export default function CartPage() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            ← Back to all items
-          </Link>
+          <div className={`flex justify-between items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <Link
+              href="/"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              {isRTL ? '→' : '←'} {t('nav.backToItems')}
+            </Link>
+            <LanguageToggle />
+          </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-6">
-            <div className="flex justify-between items-center mb-6">
+            <div className={`flex justify-between items-center mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <h1 className="text-2xl font-bold text-gray-900">
-                Shopping Cart ({cart.items.length} items)
+                {t('cart.title')} ({cart.items.length} {t('items.count')})
               </h1>
               <button
                 onClick={clearCart}
                 className="text-red-600 hover:text-red-800 text-sm font-medium"
               >
-                Clear Cart
+                {t('cart.clearCart')}
               </button>
             </div>
 
             <div className="space-y-4 mb-8">
               {cart.items.map((item) => (
-                <div key={item.id} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
-                  <div className="flex items-center space-x-4">
+                <div key={item.id} className={`flex items-center justify-between p-4 border border-gray-200 rounded-lg ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <div className={`flex items-center space-x-4 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
                     <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
                       <span className="text-2xl">📷</span>
                     </div>
-                    <div>
+                    <div className={isRTL ? 'text-right' : 'text-left'}>
                       <h3 className="font-semibold text-gray-900">{item.name}</h3>
-                      <p className="text-sm text-gray-600">{item.condition} • {item.category}</p>
+                      <p className="text-sm text-gray-600">{translateCondition(item.condition)} • {item.category}</p>
                       <p className="text-lg font-bold text-green-600">${item.price}</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
+                  <div className={`flex items-center space-x-4 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
                     <Link
                       href={`/item/${item.id}`}
                       className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                     >
-                      View Details
+                      {t('cart.viewDetails')}
                     </Link>
                     <button
                       onClick={() => removeItem(item.id)}
@@ -155,12 +170,12 @@ export default function CartPage() {
             </div>
 
             <div className="border-t pt-6">
-              <div className="flex justify-between items-center mb-6">
+              <div className={`flex justify-between items-center mb-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <span className="text-xl font-bold text-gray-900">
-                  Total: ${getTotalPrice()}
+                  {t('cart.total')} ${getTotalPrice()}
                 </span>
                 <span className="text-sm text-gray-600">
-                  {cart.items.length} item{cart.items.length !== 1 ? 's' : ''}
+                  {cart.items.length} {t('items.count')}
                 </span>
               </div>
 
@@ -172,7 +187,7 @@ export default function CartPage() {
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <span>💬</span>
-                  Contact Seller for All Items
+                  {t('cart.contactSeller')}
                 </a>
 
                 <button
@@ -180,12 +195,12 @@ export default function CartPage() {
                   className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   <span>💰</span>
-                  Make Bulk Offer
+                  {t('cart.makeBulkOffer')}
                 </button>
 
                 <div className="text-center">
                   <p className="text-sm text-gray-600">
-                    Contact seller or make an offer for all items at once
+                    {t('cart.contactOrOffer')}
                   </p>
                 </div>
               </div>
@@ -197,9 +212,9 @@ export default function CartPage() {
       {/* Bulk Offer Modal */}
       {showBulkOffer && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg max-w-md w-full p-6">
-            <div className="flex justify-between items-start mb-4">
-              <h2 className="text-xl font-bold text-gray-900">Make Bulk Offer</h2>
+          <div className={`bg-white rounded-lg max-w-md w-full p-6 ${isRTL ? 'text-right' : 'text-left'}`}>
+            <div className={`flex justify-between items-start mb-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+              <h2 className="text-xl font-bold text-gray-900">{t('bulkOffer.title')}</h2>
               <button
                 onClick={() => setShowBulkOffer(false)}
                 className="text-gray-400 hover:text-gray-600"
@@ -209,18 +224,18 @@ export default function CartPage() {
             </div>
 
             <div className="mb-4">
-              <h3 className="font-semibold text-gray-900 mb-2">Cart Items ({cart.items.length})</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('bulkOffer.cartItems')} ({cart.items.length})</h3>
               <div className="max-h-32 overflow-y-auto space-y-1">
                 {cart.items.map((item) => (
-                  <div key={item.id} className="text-sm text-gray-600 flex justify-between">
+                  <div key={item.id} className={`text-sm text-gray-600 flex justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <span>{item.name}</span>
                     <span>${item.price}</span>
                   </div>
                 ))}
               </div>
               <div className="border-t pt-2 mt-2">
-                <div className="flex text-gray-700 justify-between font-semibold">
-                  <span>Total Listed Price:</span>
+                <div className={`flex text-gray-700 justify-between font-semibold ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <span>{t('bulkOffer.totalListed')}</span>
                   <span className="text-green-600">${getTotalPrice()}</span>
                 </div>
               </div>
@@ -229,14 +244,14 @@ export default function CartPage() {
             <form onSubmit={handleBulkOfferSubmit}>
               <div className="mb-4">
                 <label htmlFor="bulk-offer-price" className="block text-sm font-medium text-gray-700 mb-2">
-                  Your Bulk Offer ($)
+                  {t('bulkOffer.yourOffer')}
                 </label>
                 <input
                   type="number"
                   id="bulk-offer-price"
                   value={bulkOfferPrice}
                   onChange={(e) => setBulkOfferPrice(e.target.value)}
-                  placeholder="Enter your bulk offer"
+                  placeholder={t('bulkOffer.placeholder')}
                   className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   min="1"
                   step="1"
@@ -246,23 +261,23 @@ export default function CartPage() {
 
               <div className="bg-gray-50 rounded-lg p-3 mb-4">
                 <p className="text-sm text-gray-600">
-                  Your bulk offer will be sent via WhatsApp with all item details. Buying in bulk often gets better deals!
+                  {t('bulkOffer.description')}
                 </p>
               </div>
 
-              <div className="flex gap-3">
+              <div className={`flex gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                 <button
                   type="button"
                   onClick={() => setShowBulkOffer(false)}
                   className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors"
                 >
-                  Cancel
+                  {t('bulkOffer.cancel')}
                 </button>
                 <button
                   type="submit"
                   className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
                 >
-                  Send Bulk Offer
+                  {t('bulkOffer.send')}
                 </button>
               </div>
             </form>
