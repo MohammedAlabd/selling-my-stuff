@@ -119,7 +119,7 @@
   {
     "id": 12,
     "name": "Axen 55' TV",
-    "soldOut": false,
+    "soldOut": true,
     "description": "55-inch Axen television in excellent condition. Great picture quality and perfect for home entertainment.",
     "price": 50,
     "condition": "Good",
