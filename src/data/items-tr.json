@@ -192,6 +192,7 @@
     {
         "id": 17,
         "asGoodAsNew": true,
+        "soldOut": true,
         "name": "Buzdolabı Vestel NF45011 402 Lt No-Frost",
         "description": "Vestel'den büyük 402L No-Frost buzdolabı. Enerji verimli tasarım ve geniş iç hacim ile mükemmel durumda.",
         "price": 300,
@@ -322,6 +323,7 @@
     },
     {
         "id": 24,
+        "soldOut": true,
         "name": "Çalışma Monitörü",
         "description": "FreeSync teknolojili Samsung 24 inç Full HD IPS LED monitör. Mükemmel durumda ve çalışma veya oyun için mükemmel.",
         "price": 50,
@@ -432,6 +434,7 @@
     },
     {
         "id": 27,
+        "soldOut": true,
         "name": "Ofis Koltuğu",
         "description": "Dosya sırtlık desteği olan Techno Rest ergonomik ofis koltuğu. Uzun çalışma saatleri için rahat ve ayarlanabilir.",
         "price": 80,
@@ -484,7 +487,7 @@
     {
         "id": 54,
         "asGoodAsNew": false,
-        "soldOut": false,
+        "soldOut": true,
         "name": "Lovo relax clean yatak 150x200 cm",
         "description": "İyi durumda Lovo relax clean yatak. 150x200 cm boyutunda.",
         "price": 50,
