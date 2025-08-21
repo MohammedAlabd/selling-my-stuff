@@ -171,6 +171,7 @@
   {
     "id": 16,
     "asGoodAsNew": true,
+    "soldOut": true,
     "name": "Bulaşık Makinesi Vestel Bm 4202 Wifi 4 Programlı",
     "description": "WiFi bağlantısı ve 4 farklı yıkama programı olan modern Vestel bulaşık makinesi. Mükemmel durumda ve enerji verimli.",
     "price": 200,
@@ -193,7 +194,7 @@
   {
     "id": 17,
     "asGoodAsNew": true,
-    "soldOut": true,
+    "soldOut": false,
     "name": "Buzdolabı Vestel NF45011 402 Lt No-Frost",
     "description": "Vestel'den büyük 402L No-Frost buzdolabı. Enerji verimli tasarım ve geniş iç hacim ile mükemmel durumda.",
     "price": 300,

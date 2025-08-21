@@ -171,6 +171,7 @@
   {
     "id": 16,
     "asGoodAsNew": true,
+    "soldOut": true,
     "name": "Dish Washer Vestel Bm 4202 Wifi 4 Programlı",
     "description": "Modern Vestel dishwasher with WiFi connectivity and 4 different washing programs. Excellent condition and energy efficient.",
     "price": 200,
@@ -193,7 +194,7 @@
   {
     "id": 17,
     "asGoodAsNew": true,
-    "soldOut": true,
+    "soldOut": false,
     "name": "Fridge Vestel NF45011 402 Lt No-Frost",
     "description": "Large 402L No-Frost refrigerator from Vestel. Excellent condition with energy-efficient design and spacious interior.",
     "price": 300,

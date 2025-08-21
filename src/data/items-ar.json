@@ -9,8 +9,8 @@
     "condition": "excellent",
     "category": "أدوات",
     "assets": [
-      "https://cdn.dsmcdn.com/ty434/product/media/images/20220516/11/111973534/480324951/3/3_org_zoom.jpg",
-      "https://cdn.dsmcdn.com/ty432/product/media/images/20220516/11/111973534/480324951/1/1_org_zoom.jpg"
+      "https://cdn.dsmcdn.com/ty432/product/media/images/20220516/11/111973534/480324951/1/1_org_zoom.jpg",
+      "https://cdn.dsmcdn.com/ty434/product/media/images/20220516/11/111973534/480324951/3/3_org_zoom.jpg"
     ],
     "specifications": {
       "url": "https://www.trendyol.com/xiaomi/mi-air-purifier-4-akilli-hava-temizleyici-beyaz-p-301588538?boutiqueId=614666&merchantId=968",
@@ -171,6 +171,7 @@
   {
     "id": 16,
     "asGoodAsNew": true,
+    "soldOut": true,
     "name": "غسالة أطباق فيستيل BM 4202 واي فاي 4 برامج",
     "description": "غسالة أطباق فيستيل حديثة مع اتصال واي فاي و4 برامج غسيل مختلفة. في حالة ممتازة وموفرة للطاقة.",
     "price": 200,
@@ -193,7 +194,7 @@
   {
     "id": 17,
     "asGoodAsNew": true,
-    "soldOut": true,
+    "soldOut": false,
     "name": "ثلاجة فيستيل NF45011 سعة 402 لتر بدون صقيع",
     "description": "ثلاجة كبيرة سعة 402 لتر بدون صقيع من فيستيل. في حالة ممتازة مع تصميم موفر للطاقة ومساحة داخلية واسعة.",
     "price": 300,
